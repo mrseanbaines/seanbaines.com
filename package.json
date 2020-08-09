@@ -1,0 +1,21 @@
+{
+  "name": "mrseanbaines",
+  "scripts": {
+    "start": "gatsby develop",
+    "build": "gatsby build"
+  },
+  "dependencies": {
+    "gatsby": "^2.24.37",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@mrseanbaines/prettier-config": "^1.1.0",
+    "@types/react": "^16.9.45",
+    "@types/react-dom": "^16.9.8",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  },
+  "prettier": "@mrseanbaines/prettier-config",
+  "private": true
+}

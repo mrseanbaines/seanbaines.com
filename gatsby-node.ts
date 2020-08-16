@@ -1,5 +1,7 @@
 import { GatsbyNode } from 'gatsby'
 import type Webpack from 'webpack'
+// FIXME: Make TypeScript recognize custom declaration file
+// @ts-ignore: No declaration file error
 import CleanTerminalPlugin from 'clean-terminal-webpack-plugin'
 
 export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({ stage, actions }) => {

@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "jsx": "preserve",
-    "noEmit": true
+    "noEmit": true,
+    "strict": true
   }
 }

@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
+    "skipLibCheck": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "preserve",
     "noEmit": true,
-    "strict": true
-  }
+    "strict": true,
+    "baseUrl": "src"
+  },
+  "include": ["src"]
 }

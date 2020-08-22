@@ -1,7 +1,18 @@
 import { createGlobalStyle, css } from 'styled-components'
 
-export const Reset = createGlobalStyle(() => {
+import jost from 'fonts/jost.woff2'
+import { fonts } from 'theme'
+
+export const Reset = createGlobalStyle(({ theme }) => {
   return css`
+    @font-face {
+      font-family: ${fonts.primary};
+      src: url(${jost}) format('woff2');
+      font-weight: 1 999;
+      font-style: normal;
+      font-display: swap;
+    }
+
     *,
     *:before,
     *:after {

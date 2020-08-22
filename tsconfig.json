@@ -6,6 +6,9 @@
     "jsx": "preserve",
     "noEmit": true,
     "strict": true,
-    "baseUrl": "src"
+    "baseUrl": "src",
+    "paths": {
+      "clean-terminal-webpack-plugin": ["@types/clean-terminal-webpack-plugin.d.ts"]
+    }
   }
 }

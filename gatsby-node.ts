@@ -12,25 +12,23 @@ const paths = {
   appNodeModules: resolveApp('node_modules'),
 }
 
-export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({ stage, actions }) => {
-  if (stage === 'develop') {
-    const config: Webpack.Configuration = {
-      plugins: [new CleanTerminalPlugin()],
-      module: {
-        rules: [
-          {
-            enforce: 'pre',
-            test: /\.tsx?$/,
-            exclude: /node_modules/,
-            use: ['eslint-loader'],
-          },
-        ],
-      },
-      resolve: {
-        modules: ['node_modules', paths.appNodeModules, paths.appSrc],
-      },
-    }
-
-    actions.setWebpackConfig(config)
+export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({ actions }) => {
+  const config: Webpack.Configuration = {
+    plugins: [new CleanTerminalPlugin()],
+    module: {
+      rules: [
+        {
+          enforce: 'pre',
+          test: /\.tsx?$/,
+          exclude: /node_modules/,
+          use: ['eslint-loader'],
+        },
+      ],
+    },
+    resolve: {
+      modules: ['node_modules', paths.appNodeModules, paths.appSrc],
+    },
   }
+
+  actions.setWebpackConfig(config)
 }

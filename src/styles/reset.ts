@@ -1,6 +1,6 @@
 import { createGlobalStyle, css } from 'styled-components'
 
-const Reset = createGlobalStyle(() => {
+export const Reset = createGlobalStyle(() => {
   return css`
     *,
     *:before,
@@ -38,5 +38,3 @@ const Reset = createGlobalStyle(() => {
     }
   `
 })
-
-export default Reset

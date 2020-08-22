@@ -1,3 +1,5 @@
 require('ts-node').register()
 
-module.exports = require('./gatsby-config.ts')
+const { gatsbyConfig } = require('./gatsby-config.ts')
+
+module.exports = gatsbyConfig

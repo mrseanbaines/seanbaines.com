@@ -11,12 +11,16 @@
   },
   "dependencies": {
     "gatsby": "^2.24.47",
+    "gatsby-plugin-styled-components": "^3.3.10",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
     "@mrseanbaines/prettier-config": "^1.1.0",
+    "@types/styled-components": "^5.1.2",
     "@types/webpack": "^4.41.21",
+    "babel-plugin-styled-components": "^1.11.1",
     "clean-terminal-webpack-plugin": "^3.0.0",
     "eslint": "^7.7.0",
     "eslint-config-prettier": "^6.11.0",

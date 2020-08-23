@@ -6,7 +6,7 @@ type SectionProps = {
 
 export const Section = styled.div<SectionProps>(({ theme, fullWidth }) => {
   const containerStyles = css`
-    max-width: 1100px;
+    max-width: 1075px;
     margin: 0 auto;
   `
 

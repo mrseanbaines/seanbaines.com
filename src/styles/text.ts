@@ -9,14 +9,15 @@ type ThemeProps = {
 
 type TextProps = ThemeProps &
   SpaceProps & {
+    align?: 'left' | 'center' | 'right'
+    block?: boolean
     color?: keyof typeof theme.colors.text
     size?: number
-    weight?: keyof typeof theme.fontWeights
     upper?: boolean
-    align?: 'left' | 'center' | 'right'
+    weight?: keyof typeof theme.fontWeights
   }
 
-const text = ({ theme, color, size, weight, upper, align }: TextProps) => {
+const text = ({ theme, color, size, weight, upper, align, block }: TextProps) => {
   if (!!size && !theme.fontStyles[size]) {
     throw new Error('Invalid `size` prop')
   }
@@ -27,6 +28,10 @@ const text = ({ theme, color, size, weight, upper, align }: TextProps) => {
 
   const alignStyles = css`
     text-align: ${align};
+  `
+
+  const blockStyles = css`
+    display: block;
   `
 
   return css`
@@ -40,6 +45,7 @@ const text = ({ theme, color, size, weight, upper, align }: TextProps) => {
 
     ${upper && upperStyles}
     ${align && alignStyles}
+    ${block && blockStyles}
   `
 }
 

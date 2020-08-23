@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
-    "skipLibCheck": true,
+    "baseUrl": "src",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "noEmit": true,
-    "strict": true,
-    "baseUrl": "src",
     "paths": {
       "clean-terminal-webpack-plugin": ["@types/clean-terminal-webpack-plugin.d.ts"]
-    }
+    },
+    "skipLibCheck": true,
+    "strict": true
   }
 }

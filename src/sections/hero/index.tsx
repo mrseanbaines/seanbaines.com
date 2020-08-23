@@ -6,9 +6,15 @@ import { Icon } from 'components/icon'
 
 import { Wrapper, Icons } from './styles'
 
-type Props = {}
+type Props = {
+  social: {
+    github: string
+    twitter: string
+    linkedin: string
+  }
+}
 
-export const Hero: React.FC<Props> = () => (
+export const Hero: React.FC<Props> = ({ social }) => (
   <Section>
     <Wrapper>
       <div>
@@ -48,9 +54,15 @@ export const Hero: React.FC<Props> = () => (
         </Text>
 
         <Icons>
-          <Icon icon='github' />
-          <Icon icon='twitter' />
-          <Icon icon='linkedin' />
+          <a href={`https://github.com/${social.github}`}>
+            <Icon icon='github' />
+          </a>
+          <a href={`https://twitter.com/${social.twitter}`}>
+            <Icon icon='twitter' />
+          </a>
+          <a href={`https://www.linkedin.com/in/${social.linkedin}`}>
+            <Icon icon='linkedin' />
+          </a>
         </Icons>
       </div>
     </Wrapper>

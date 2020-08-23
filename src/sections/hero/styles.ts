@@ -25,5 +25,9 @@ export const Icons = styled.div(({ theme }) => {
     justify-content: start;
     gap: ${theme.space[1]};
     grid-auto-flow: column;
+
+    a {
+      line-height: 0;
+    }
   `
 })

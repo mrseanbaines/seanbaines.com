@@ -13,6 +13,8 @@ export const colors = {
   yellow: '#FFF7CC',
 }
 
+const toMediaQuery = (bp: string) => `@media screen and (min-width: ${bp})`
+
 export const theme = {
   borders: {
     default: `1px solid ${colors.grey[1]}`,
@@ -43,12 +45,19 @@ export const theme = {
     { size: '1.75rem', lineHeight: 1.3 },
     { size: '2.25rem', lineHeight: 1.2 },
     { size: '3.5rem', lineHeight: 1.1 },
-    { size: '6rem', lineHeight: 1.0 },
+    { size: '4.5rem', lineHeight: 1.0 },
+    { size: '6rem', lineHeight: 0.9 },
   ],
   fontWeights: {
     medium: 500,
     semibold: 600,
     bold: 700,
+  },
+  mediaQueries: {
+    xs: toMediaQuery('576px'),
+    sm: toMediaQuery('768px'),
+    md: toMediaQuery('992px'),
+    lg: toMediaQuery('1200px'),
   },
   radii: {
     rounded: ['8px'],

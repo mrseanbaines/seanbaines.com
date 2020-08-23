@@ -33,6 +33,10 @@ export const theme = {
       muted: colors.grey[1],
       primary: colors.primary,
     },
+    selection: {
+      foreground: colors.white,
+      background: colors.primary,
+    },
     highlight: [colors.green, colors.orange, colors.red, colors.yellow],
   },
   fonts: {

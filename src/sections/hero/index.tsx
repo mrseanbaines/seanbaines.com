@@ -54,13 +54,13 @@ export const Hero: React.FC<Props> = ({ social }) => (
         </Text>
 
         <Icons>
-          <a href={`https://github.com/${social.github}`}>
+          <a href={`https://github.com/${social.github}`} target='_blank' rel='noreferrer'>
             <Icon icon='github' />
           </a>
-          <a href={`https://twitter.com/${social.twitter}`}>
+          <a href={`https://twitter.com/${social.twitter}`} target='_blank' rel='noreferrer'>
             <Icon icon='twitter' />
           </a>
-          <a href={`https://www.linkedin.com/in/${social.linkedin}`}>
+          <a href={`https://www.linkedin.com/in/${social.linkedin}`} target='_blank' rel='noreferrer'>
             <Icon icon='linkedin' />
           </a>
         </Icons>

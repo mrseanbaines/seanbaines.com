@@ -39,9 +39,9 @@ const text = ({ theme, color, size, weight, upper, align, block }: TextProps) =>
 
     color: ${(!!color && theme.colors.text[color]) || 'inherit'};
     font-family: ${theme.fonts.primary};
-    font-size: ${(!!size && theme.fontStyles[size].size) || 'inherit'};
+    font-size: ${(!!size && theme.fontStyles[size]?.size) || 'inherit'};
     font-weight: ${(!!weight && theme.fontWeights[weight]) || 'inherit'};
-    line-height: ${(!!size && theme.fontStyles[size].lineHeight) || 'inherit'};
+    line-height: ${(!!size && theme.fontStyles[size]?.lineHeight) || 'inherit'};
 
     ${upper && upperStyles}
     ${align && alignStyles}

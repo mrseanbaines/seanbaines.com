@@ -18,3 +18,12 @@ export const Wrapper = styled.div(({ theme }) => {
     }
   `
 })
+
+export const Icons = styled.div(({ theme }) => {
+  return css`
+    display: grid;
+    justify-content: start;
+    gap: ${theme.space[1]};
+    grid-auto-flow: column;
+  `
+})

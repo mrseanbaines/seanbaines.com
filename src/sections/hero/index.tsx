@@ -2,8 +2,9 @@ import React from 'react'
 
 import { Section } from 'styles/layout'
 import { Text, Span } from 'styles/text'
+import { Icon } from 'components/icon'
 
-import { Wrapper } from './styles'
+import { Wrapper, Icons } from './styles'
 
 type Props = {}
 
@@ -13,7 +14,7 @@ export const Hero: React.FC<Props> = () => (
       <div>
         <Text size={7} weight='bold' upper>
           Sean{' '}
-          <Span as='div' size={6}>
+          <Span size={6} block>
             Baines
           </Span>
         </Text>
@@ -34,7 +35,7 @@ export const Hero: React.FC<Props> = () => (
           </Text>
         </hgroup>
 
-        <Text size={1} color='muted'>
+        <Text size={1} color='muted' mb={1}>
           Probabo inquit sic agam ut summo bono dolorem eum iure{' '}
           <Span as='strong' color='default' weight='semibold'>
             reprehenderit
@@ -45,6 +46,12 @@ export const Hero: React.FC<Props> = () => (
           </Span>{' '}
           praesentium voluptatum deleniti atque in sanguinem suum tam egregios viros censes tantas res gessisse
         </Text>
+
+        <Icons>
+          <Icon icon='github' />
+          <Icon icon='twitter' />
+          <Icon icon='linkedin' />
+        </Icons>
       </div>
     </Wrapper>
   </Section>

@@ -10,6 +10,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@icons-pack/react-simple-icons": "^3.10.0",
     "gatsby": "^2.24.47",
     "gatsby-plugin-styled-components": "^3.3.10",
     "react": "^16.13.1",

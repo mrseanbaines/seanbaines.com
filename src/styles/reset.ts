@@ -13,6 +13,14 @@ export const Reset = createGlobalStyle(({ theme }) => {
       font-display: swap;
     }
 
+    :root {
+      font-size: 90%;
+
+      ${theme.mediaQueries.sm} {
+        font-size: 100%;
+      }
+    }
+
     *,
     *:before,
     *:after {

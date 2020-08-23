@@ -1,6 +1,8 @@
 import React from 'react'
 import { PageProps, graphql } from 'gatsby'
 
+import { Section } from 'styles/layout'
+
 type Data = {
   site: {
     siteMetadata: {
@@ -11,7 +13,11 @@ type Data = {
 
 type Props = PageProps<Data>
 
-const IndexPage: React.FC<Props> = ({ data }) => <h1>Welcome to {data.site.siteMetadata.siteName}</h1>
+const IndexPage: React.FC<Props> = ({ data }) => (
+  <Section>
+    <h1>Welcome to {data.site.siteMetadata.siteName}</h1>
+  </Section>
+)
 
 export const query = graphql`
   query IndexPage {

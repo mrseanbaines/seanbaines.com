@@ -1,32 +1,37 @@
 import React from 'react'
-import { PageProps, graphql } from 'gatsby'
+import { PageProps } from 'gatsby'
 
 import { Section } from 'styles/layout'
+import { Text, Span } from 'styles/text'
 
-type Data = {
-  site: {
-    siteMetadata: {
-      siteName: string
-    }
-  }
-}
+type Props = PageProps
 
-type Props = PageProps<Data>
-
-const IndexPage: React.FC<Props> = ({ data }) => (
+const IndexPage: React.FC<Props> = () => (
   <Section>
-    <h1>Welcome to {data.site.siteMetadata.siteName}</h1>
+    <div>
+      <hgroup>
+        <Text size={2} color='muted' mb={0}>
+          Filium multavit
+        </Text>
+
+        <Text as='h1' size={4} mb={1}>
+          Sed ut alterum aspernandum sentiamus alii autem quibus
+        </Text>
+      </hgroup>
+
+      <Text size={1} color='muted'>
+        Probabo inquit sic agam ut summo bono dolorem eum iure{' '}
+        <Span as='strong' color='default' weight='semibold'>
+          reprehenderit
+        </Span>{' '}
+        qui{' '}
+        <Span as='strong' color='default' weight='semibold'>
+          blanditiis
+        </Span>{' '}
+        praesentium voluptatum deleniti atque in sanguinem suum tam egregios viros censes tantas res gessisse
+      </Text>
+    </div>
   </Section>
 )
-
-export const query = graphql`
-  query IndexPage {
-    site {
-      siteMetadata {
-        siteName
-      }
-    }
-  }
-`
 
 export default IndexPage

@@ -29,17 +29,26 @@ export const theme = {
     text: {
       default: colors.grey[0],
       muted: colors.grey[1],
+      primary: colors.primary,
     },
     highlight: [colors.green, colors.orange, colors.red, colors.yellow],
   },
   fonts: {
     primary: `'${fonts.primary}', 'Roboto', 'Helvetica Neue', sans-serif`,
   },
-  fontSizes: ['14px', '16px', '20px', '28px', '36px', '56px', '96px'],
+  fontStyles: [
+    { size: '14px', lineHeight: 1.6 },
+    { size: '16px', lineHeight: 1.5 },
+    { size: '20px', lineHeight: 1.4 },
+    { size: '28px', lineHeight: 1.3 },
+    { size: '36px', lineHeight: 1.2 },
+    { size: '56px', lineHeight: 1.1 },
+    { size: '96px', lineHeight: 1.0 },
+  ],
   fontWeights: {
-    medium: '500',
-    semibold: '600',
-    bold: '700',
+    medium: 500,
+    semibold: 600,
+    bold: 700,
   },
   radii: {
     rounded: ['8px'],

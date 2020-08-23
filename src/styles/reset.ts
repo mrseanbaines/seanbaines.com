@@ -42,6 +42,10 @@ export const Reset = createGlobalStyle(({ theme }) => {
       box-sizing: border-box;
     }
 
+    main {
+      overflow-x: hidden;
+    }
+
     img,
     picture {
       display: block;

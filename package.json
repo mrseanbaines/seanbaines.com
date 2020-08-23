@@ -1,7 +1,7 @@
 {
   "name": "mrseanbaines",
   "scripts": {
-    "start": "gatsby develop",
+    "start": "gatsby develop --host 0.0.0.0",
     "build": "gatsby build",
     "format": "prettier --check .",
     "format:fix": "prettier --write .",

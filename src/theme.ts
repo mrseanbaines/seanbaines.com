@@ -37,13 +37,13 @@ export const theme = {
     primary: `'${fonts.primary}', 'Roboto', 'Helvetica Neue', sans-serif`,
   },
   fontStyles: [
-    { size: '14px', lineHeight: 1.6 },
-    { size: '16px', lineHeight: 1.5 },
-    { size: '20px', lineHeight: 1.4 },
-    { size: '28px', lineHeight: 1.3 },
-    { size: '36px', lineHeight: 1.2 },
-    { size: '56px', lineHeight: 1.1 },
-    { size: '96px', lineHeight: 1.0 },
+    { size: '0.875rem', lineHeight: 1.6 },
+    { size: '1rem', lineHeight: 1.5 },
+    { size: '1.25rem', lineHeight: 1.4 },
+    { size: '1.75rem', lineHeight: 1.3 },
+    { size: '2.25rem', lineHeight: 1.2 },
+    { size: '3.5rem', lineHeight: 1.1 },
+    { size: '6rem', lineHeight: 1.0 },
   ],
   fontWeights: {
     medium: 500,
@@ -54,7 +54,7 @@ export const theme = {
     rounded: ['8px'],
   },
   sizes: {
-    icon: ['24px', '36px', '60px'],
+    icon: ['1.5rem', '2.25rem', '3.75rem'],
   },
-  space: ['8px', '24px', '32px', '64px', '80px'],
+  space: ['0.5rem', '1.5rem', '2rem', '4rem', '5rem'],
 }

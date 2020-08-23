@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, PageProps } from 'gatsby'
 
 import { Hero } from 'sections/hero'
+import { TechStack } from 'sections/tech-stack'
 
 type Data = {
   site: {
@@ -20,6 +21,8 @@ type Props = PageProps<Data>
 const IndexPage: React.FC<Props> = ({ data }) => (
   <main>
     <Hero social={data.site.siteMetadata.social} />
+
+    <TechStack />
   </main>
 )
 

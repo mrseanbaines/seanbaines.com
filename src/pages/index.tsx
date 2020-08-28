@@ -3,6 +3,7 @@ import { graphql, PageProps } from 'gatsby'
 
 import { Hero } from 'sections/hero'
 import { TechStack } from 'sections/tech-stack'
+import { Footer } from 'sections/footer'
 import { PaddingY } from 'styles/layout'
 
 type Data = {
@@ -20,11 +21,15 @@ type Data = {
 type Props = PageProps<Data>
 
 const IndexPage: React.FC<Props> = ({ data }) => (
-  <PaddingY as='main'>
-    <Hero social={data.site.siteMetadata.social} />
+  <>
+    <PaddingY as='main'>
+      <Hero social={data.site.siteMetadata.social} />
 
-    <TechStack />
-  </PaddingY>
+      <TechStack />
+    </PaddingY>
+
+    <Footer />
+  </>
 )
 
 export const query = graphql`

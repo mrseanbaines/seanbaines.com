@@ -5,6 +5,7 @@ import { Hero } from 'sections/hero'
 import { RotatingIcons } from 'sections/rotating-icons'
 import { IconCardsWithImage } from 'sections/icon-cards-with-image'
 import { IconCardsRow } from 'sections/icon-cards-row'
+import { RotatingCards } from 'sections/rotating-cards'
 import { Footer } from 'sections/footer'
 import { PaddingY } from 'styles/layout'
 
@@ -29,6 +30,7 @@ const IndexPage: React.FC<Props> = ({ data }) => (
       <RotatingIcons />
       <IconCardsWithImage />
       <IconCardsRow />
+      <RotatingCards />
     </PaddingY>
 
     <Footer />

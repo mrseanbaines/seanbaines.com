@@ -41,7 +41,7 @@ export const Hero: React.FC<Props> = ({ social }) => (
           </Text>
         </hgroup>
 
-        <Text size={1} color='muted' mb={1}>
+        <Text color='muted' mb={1}>
           Probabo inquit sic agam ut summo bono dolorem eum iure{' '}
           <Span as='strong' color='default' weight='semibold'>
             reprehenderit

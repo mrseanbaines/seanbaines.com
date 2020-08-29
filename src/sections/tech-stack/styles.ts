@@ -41,7 +41,8 @@ export const Icons = styled.div(({ theme }) => {
     justify-content: start;
     grid-auto-flow: column;
     opacity: 0.4;
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
     padding-left: ${theme.space[1]};
     padding-right: ${theme.space[1]};
 

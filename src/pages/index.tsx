@@ -3,6 +3,7 @@ import { graphql, PageProps } from 'gatsby'
 
 import { Hero } from 'sections/hero'
 import { TechStack } from 'sections/tech-stack'
+import { IconCardsWithImage } from 'sections/icon-cards-with-image'
 import { Footer } from 'sections/footer'
 import { PaddingY } from 'styles/layout'
 
@@ -26,6 +27,7 @@ const IndexPage: React.FC<Props> = ({ data }) => (
       <Hero social={data.site.siteMetadata.social} />
 
       <TechStack />
+      <IconCardsWithImage />
     </PaddingY>
 
     <Footer />

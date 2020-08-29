@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { Section } from 'styles/layout'
+import { Section, Row } from 'styles/layout'
 import { Text, Span } from 'styles/text'
 import { Icon } from 'components/icon'
 
-import { Wrapper, TitleWrapper, Icons } from './styles'
+import { TitleWrapper, Icons } from './styles'
 
 type Props = {
   social: {
@@ -16,7 +16,7 @@ type Props = {
 
 export const Hero: React.FC<Props> = ({ social }) => (
   <Section>
-    <Wrapper>
+    <Row offset={1}>
       <TitleWrapper>
         <Text size={7} weight='bold' upper>
           Sean{' '}
@@ -65,6 +65,6 @@ export const Hero: React.FC<Props> = ({ social }) => (
           </a>
         </Icons>
       </div>
-    </Wrapper>
+    </Row>
   </Section>
 )

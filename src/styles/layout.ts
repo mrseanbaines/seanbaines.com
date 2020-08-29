@@ -47,3 +47,31 @@ export const Section = styled.section<SectionProps>(({ theme, fullWidth, noGutte
     ${noGutter && noGutterStyles}
   `
 })
+
+type RowProps = {
+  cols?: 2 | 3
+  offset?: 1 | 2
+}
+
+export const Row = styled.div<RowProps>(({ theme, cols = 2, offset = 0 }) => {
+  const offsetStyles = css`
+    ${theme.mediaQueries.md} {
+      grid-template-columns: ${6 + offset}fr ${6 - offset}fr;
+    }
+  `
+
+  return css`
+    display: grid;
+    justify-items: start;
+    align-items: center;
+    grid-template-columns: 1fr;
+    column-gap: ${theme.space[1]};
+    row-gap: ${theme.space[4]};
+
+    ${theme.mediaQueries.sm} {
+      grid-template-columns: repeat(${cols}, 1fr);
+    }
+
+    ${cols === 2 && !!offset && offsetStyles}
+  `
+})

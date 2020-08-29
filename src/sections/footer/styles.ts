@@ -9,5 +9,6 @@ export const Wrapper = styled(Text).attrs({ as: 'div' })(({ theme }) => {
     align-items: center;
     grid-auto-flow: column;
     gap: ${theme.space[0]};
+    opacity: 0.6;
   `
 })

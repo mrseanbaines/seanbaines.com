@@ -21,13 +21,13 @@ export const Global = createGlobalStyle(({ theme }) => {
       }
     }
 
-    main {
-      overflow: hidden;
-    }
-
     ::selection {
       background: ${theme.colors.selection.background};
       color: ${theme.colors.selection.foreground};
+    }
+
+    main {
+      overflow: hidden;
     }
   `
 })

@@ -7,13 +7,14 @@ export type Props = {
   icon: IconProps['icon']
   title: string
   body: string
+  large?: boolean
 }
 
-export const IconCard: React.FC<Props> = ({ icon, title, body }) => (
+export const IconCard: React.FC<Props> = ({ icon, title, body, large }) => (
   <div>
-    <Icon icon={icon} size={1} mb={0} />
+    <Icon icon={icon} size={large ? 2 : 1} mb={large ? 1 : 0} />
 
-    <Text size={2} mb={0}>
+    <Text size={large ? 3 : 2} mb={0}>
       {title}
     </Text>
 

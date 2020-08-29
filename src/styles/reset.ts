@@ -27,6 +27,7 @@ export const Reset = createGlobalStyle(() => {
     picture {
       display: block;
       max-width: 100%;
+      user-select: none;
     }
 
     a,

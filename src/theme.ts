@@ -13,12 +13,20 @@ export const colors = {
   yellow: '#FFF7CC',
 }
 
+const breakpoints = {
+  xs: '576px',
+  sm: '768px',
+  md: '992px',
+  lg: '1200px',
+}
+
 const toMediaQuery = (bp: string) => `@media screen and (min-width: ${bp})`
 
 export const theme = {
   borders: {
     default: `1px solid ${colors.grey[1]}`,
   },
+  breakpoints: Object.values(breakpoints),
   colors: {
     primary: colors.primary,
     background: {
@@ -57,12 +65,7 @@ export const theme = {
     semibold: 600,
     bold: 700,
   },
-  mediaQueries: {
-    xs: toMediaQuery('576px'),
-    sm: toMediaQuery('768px'),
-    md: toMediaQuery('992px'),
-    lg: toMediaQuery('1200px'),
-  },
+  mediaQueries: Object.fromEntries(Object.entries(breakpoints).map(([name, value]) => [name, toMediaQuery(value)])),
   radii: {
     rounded: ['8px'],
   },

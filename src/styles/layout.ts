@@ -18,7 +18,7 @@ export const PaddingY = styled.div<SectionProps>(({ theme }) => {
   `
 })
 
-type SectionProps = {
+export type SectionProps = {
   fullWidth?: boolean
   noGutter?: boolean
 }
@@ -48,14 +48,14 @@ export const Section = styled.section<SectionProps>(({ theme, fullWidth, noGutte
   `
 })
 
-type RowProps = {
+export type RowProps = {
   cols?: 2 | 3
   offset?: 1 | 2
 }
 
 export const Row = styled.div<RowProps>(({ theme, cols = 2, offset = 0 }) => {
   const offsetStyles = css`
-    ${theme.mediaQueries.md} {
+    ${theme.mediaQueries.lg} {
       grid-template-columns: ${6 + offset}fr ${6 - offset}fr;
     }
   `
@@ -65,11 +65,11 @@ export const Row = styled.div<RowProps>(({ theme, cols = 2, offset = 0 }) => {
     justify-items: start;
     align-items: center;
     grid-template-columns: 1fr;
-    column-gap: ${theme.space[1]};
-    row-gap: ${theme.space[4]};
+    gap: ${theme.space[3]};
 
-    ${theme.mediaQueries.sm} {
+    ${theme.mediaQueries.md} {
       grid-template-columns: repeat(${cols}, 1fr);
+      gap: ${theme.space[4]};
     }
 
     ${cols === 2 && !!offset && offsetStyles}

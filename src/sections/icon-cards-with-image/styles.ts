@@ -1,23 +1,42 @@
 import styled, { css } from 'styled-components'
 
-export const TitleWrapper = styled.div(({ theme }) => {
+export const Img = styled.img(({ theme }) => {
   return css`
-    display: grid;
-    grid-template-columns: 1fr;
+    max-width: none;
+    width: 175%;
+
+    ${theme.mediaQueries.xs} {
+      width: 125%;
+    }
 
     ${theme.mediaQueries.sm} {
-      grid-template-columns: 1fr 1fr;
+      width: 100%;
     }
 
     ${theme.mediaQueries.md} {
-      grid-template-columns: 8fr 4fr;
+      width: 175%;
+    }
+
+    ${theme.mediaQueries.lg} {
+      width: 200%;
     }
   `
 })
 
-export const Img = styled.img(() => {
+export const IconCardsWrapper = styled.div(({ theme }) => {
   return css`
-    max-width: none;
-    width: 200%;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: ${theme.space[1]};
+    row-gap: ${theme.space[2]};
+
+    ${theme.mediaQueries.xs} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    ${theme.mediaQueries.md} {
+      column-gap: ${theme.space[2]};
+      row-gap: ${theme.space[3]};
+    }
   `
 })

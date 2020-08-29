@@ -1,15 +1,15 @@
 import styled, { css, DefaultTheme } from 'styled-components'
-import { space, SpaceProps } from 'styled-system'
+import { space, SpaceProps, textAlign, TextAlignProps } from 'styled-system'
 
 import { theme } from 'theme'
 
-type ThemeProps = {
+export type ThemeProps = {
   theme: DefaultTheme
 }
 
-type TextProps = ThemeProps &
+export type TextProps = ThemeProps &
+  TextAlignProps &
   SpaceProps & {
-    align?: 'left' | 'center' | 'right'
     block?: boolean
     color?: keyof typeof theme.colors.text
     size?: number
@@ -17,7 +17,7 @@ type TextProps = ThemeProps &
     weight?: keyof typeof theme.fontWeights
   }
 
-const text = ({ theme, color, size, weight, upper, align, block }: TextProps) => {
+const text = ({ theme, color, size, weight, upper, block }: TextProps) => {
   if (!!size && !theme.fontStyles[size]) {
     throw new Error('Invalid `size` prop')
   }
@@ -26,25 +26,20 @@ const text = ({ theme, color, size, weight, upper, align, block }: TextProps) =>
     text-transform: uppercase;
   `
 
-  const alignStyles = css`
-    text-align: ${align};
-  `
-
   const blockStyles = css`
     display: block;
   `
 
   return css`
-    ${space}
-
     color: ${(!!color && theme.colors.text[color]) || 'inherit'};
     font-family: ${theme.fonts.primary};
     font-size: ${(!!size && theme.fontStyles[size]?.size) || 'inherit'};
     font-weight: ${(!!weight && theme.fontWeights[weight]) || 'inherit'};
     line-height: ${(!!size && theme.fontStyles[size]?.lineHeight) || 'inherit'};
 
+    ${space}
+    ${textAlign}
     ${upper && upperStyles}
-    ${align && alignStyles}
     ${block && blockStyles}
   `
 }

@@ -6,7 +6,7 @@ import { Icon } from 'components/icon'
 
 import { Wrapper, IconsWrapper, Icons } from './styles'
 
-type Props = {}
+export type Props = {}
 
 const icons = [
   'babel',
@@ -39,7 +39,7 @@ const icons = [
 export const TechStack: React.FC<Props> = () => (
   <Section fullWidth>
     <Wrapper>
-      <Text size={2} align='center'>
+      <Text size={2} textAlign='center'>
         Quid ex ea voluptate velit
       </Text>
 

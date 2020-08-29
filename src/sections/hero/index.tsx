@@ -6,7 +6,7 @@ import { Icon } from 'components/icon'
 
 import { TitleWrapper, Icons } from './styles'
 
-type Props = {
+export type Props = {
   social: {
     github: string
     twitter: string

@@ -7,7 +7,7 @@ import { IconCardsWithImage } from 'sections/icon-cards-with-image'
 import { Footer } from 'sections/footer'
 import { PaddingY } from 'styles/layout'
 
-type Data = {
+export type Data = {
   site: {
     siteMetadata: {
       social: {
@@ -19,7 +19,7 @@ type Data = {
   }
 }
 
-type Props = PageProps<Data>
+export type Props = PageProps<Data>
 
 const IndexPage: React.FC<Props> = ({ data }) => (
   <>

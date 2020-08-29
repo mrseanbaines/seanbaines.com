@@ -1,23 +1,45 @@
 import React from 'react'
 
+import { IconCard } from 'components/icon-card'
 import { Section, Row } from 'styles/layout'
 import { Text } from 'styles/text'
 import vscodeScreenshot from 'images/vscode-screenshot-1.png'
 
-import { Img } from './styles'
+import { IconCardsWrapper, Img } from './styles'
 
-type Props = {}
+export type Props = {}
 
 export const IconCardsWithImage: React.FC<Props> = () => (
   <Section>
     <Row offset={2}>
-      <Text size={5} weight='bold'>
+      <Text size={5} weight='bold' textAlign={['right', 'left']}>
         Torquatos nostros quos dolores et dolore
       </Text>
     </Row>
 
     <Row offset={1}>
-      <div></div>
+      <IconCardsWrapper>
+        <IconCard
+          icon='html5'
+          title='Omne animal simul'
+          body='At vero eos censes aut officiis debitis aut fugiat aliquid praeter voluptatem ipsam per se repellere idque facere nondum'
+        />
+        <IconCard
+          icon='css3'
+          title='Filium multavit'
+          body='In oculis quidem rerum necessitatibus saepe eveniet ut earum rerum facilis est et dolore disputandum putant sed'
+        />
+        <IconCard
+          icon='typescript'
+          title='Alii autem quibus'
+          body='Quae fuerit causa mox videro interea hoc tenebo si mihi probabis ea quae sine causa quae fuerit causa nollem'
+        />
+        <IconCard
+          icon='javascript'
+          title='Magnum periculum'
+          body='Ut placet inquam tum dicere exorsus est consecutus laudem et rationibus confirmare tantum satis esse quid est et negent'
+        />
+      </IconCardsWrapper>
 
       <Img src={vscodeScreenshot} alt='Visual Studio Code screenshot' />
     </Row>

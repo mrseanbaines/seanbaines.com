@@ -36,7 +36,7 @@ const icons = [
   'yarn',
 ] as const
 
-export const TechStack: React.FC<Props> = () => (
+export const RotatingIcons: React.FC<Props> = () => (
   <Section fullWidth>
     <Wrapper>
       <Text size={2} textAlign='center'>

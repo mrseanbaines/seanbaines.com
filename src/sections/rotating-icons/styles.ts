@@ -43,6 +43,7 @@ export const Icons = styled.div(({ theme }) => {
     opacity: 0.4;
     overflow-x: auto;
     overflow-y: hidden;
+    scrollbar-width: thin;
     padding-left: ${theme.space[1]};
     padding-right: ${theme.space[1]};
 

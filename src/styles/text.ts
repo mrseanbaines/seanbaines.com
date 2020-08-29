@@ -18,7 +18,9 @@ export type TextProps = ThemeProps &
   }
 
 const text = ({ theme, color, size, weight, upper, block }: TextProps) => {
-  if (!!size && !theme.fontStyles[size]) {
+  const isDefined = <T extends any>(prop: any): prop is Required<T> => typeof prop !== 'undefined'
+
+  if (isDefined(size) && !theme.fontStyles[size]) {
     throw new Error('Invalid `size` prop')
   }
 
@@ -31,11 +33,11 @@ const text = ({ theme, color, size, weight, upper, block }: TextProps) => {
   `
 
   return css`
-    color: ${(!!color && theme.colors.text[color]) || 'inherit'};
+    color: ${(isDefined(color) && theme.colors.text[color]) || 'inherit'};
     font-family: ${theme.fonts.primary};
-    font-size: ${(!!size && theme.fontStyles[size]?.size) || 'inherit'};
-    font-weight: ${(!!weight && theme.fontWeights[weight]) || 'inherit'};
-    line-height: ${(!!size && theme.fontStyles[size]?.lineHeight) || 'inherit'};
+    font-size: ${(isDefined(size) && theme.fontStyles[size]?.size) || 'inherit'};
+    font-weight: ${(isDefined(weight) && theme.fontWeights[weight]) || 'inherit'};
+    line-height: ${(isDefined(size) && theme.fontStyles[size]?.lineHeight) || 'inherit'};
 
     ${space}
     ${textAlign}

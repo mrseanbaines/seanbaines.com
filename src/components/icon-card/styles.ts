@@ -24,8 +24,8 @@ export const IconWrapper = styled.div<IconWrapperProps>(({ theme, stroke, large 
 
     ::before {
       content: '';
-      width: ${large ? '80px' : '60px'};
-      height: ${large ? '80px' : '60px'};
+      width: ${theme.sizes.icon[large ? 3 : 2]};
+      height: ${theme.sizes.icon[large ? 3 : 2]};
       display: block;
       position: absolute;
       bottom: 10%;

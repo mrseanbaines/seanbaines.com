@@ -70,7 +70,7 @@ export const theme = {
     rounded: ['8px'],
   },
   sizes: {
-    icon: ['1.5rem', '2.25rem', '3.75rem'],
+    icon: ['1.5rem', '2.25rem', '3.75rem', '5rem'],
   },
   space: ['0.5rem', '1.5rem', '2rem', '4rem', '5rem'],
 }

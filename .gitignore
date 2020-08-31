@@ -1,3 +1,4 @@
 # Gatsby files
 .cache/
 public/
+.env

@@ -41,6 +41,7 @@ const text = ({ theme, color, size, weight, upper, block, textLink }: TextProps)
     color: transparent;
     display: inline-block;
     background-clip: text;
+    -webkit-background-clip: text;
     background-repeat: no-repeat;
     background-image: linear-gradient(
       to bottom,

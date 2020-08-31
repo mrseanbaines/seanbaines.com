@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components'
 
+import strokeUnderline from 'images/stroke-underline.svg'
+
 export const IconCardsWrapper = styled.div(({ theme }) => {
   return css`
     display: grid;
@@ -15,6 +17,21 @@ export const IconCardsWrapper = styled.div(({ theme }) => {
     ${theme.mediaQueries.md} {
       column-gap: ${theme.space[2]};
       row-gap: ${theme.space[3]};
+    }
+  `
+})
+
+export const TitleWrapper = styled.div(() => {
+  return css`
+    position: relative;
+
+    ::before {
+      content: url(${strokeUnderline});
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
     }
   `
 })

@@ -4,15 +4,17 @@ import { IconCard } from 'components/icon-card'
 import { Section } from 'styles/layout'
 import { Text } from 'styles/text'
 
-import { IconCardsWrapper } from './styles'
+import { IconCardsWrapper, TitleWrapper } from './styles'
 
 type Props = {}
 
 export const IconCardsRow: React.FC<Props> = () => (
   <Section>
-    <Text size={5} weight='bold' textAlign='center' mb={3}>
-      Quae fuerit causa mox
-    </Text>
+    <TitleWrapper>
+      <Text size={5} weight='bold' textAlign='center' mb={3}>
+        Quae fuerit causa mox
+      </Text>
+    </TitleWrapper>
 
     <IconCardsWrapper>
       <IconCard

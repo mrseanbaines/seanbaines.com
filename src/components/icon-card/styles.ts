@@ -31,7 +31,7 @@ export const IconWrapper = styled.div<IconWrapperProps>(({ theme, stroke, large 
       bottom: 10%;
       left: 10%;
       z-index: -1;
-      background-image: url(${isDefined(stroke) && strokes[stroke]});
+      background-image: ${isDefined(stroke) && `url(${strokes[stroke]})`};
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;

@@ -2,6 +2,7 @@ import styled, { css, DefaultTheme } from 'styled-components'
 import { space, SpaceProps, textAlign, TextAlignProps } from 'styled-system'
 
 import { theme } from 'theme'
+import { isDefined } from 'utils/is-defined'
 
 export type ThemeProps = {
   theme: DefaultTheme
@@ -18,8 +19,6 @@ export type TextProps = ThemeProps &
   }
 
 const text = ({ theme, color, size, weight, upper, block }: TextProps) => {
-  const isDefined = <T extends any>(prop: any): prop is Required<T> => typeof prop !== 'undefined'
-
   if (isDefined(size) && !theme.fontStyles[size]) {
     throw new Error('Invalid `size` prop')
   }

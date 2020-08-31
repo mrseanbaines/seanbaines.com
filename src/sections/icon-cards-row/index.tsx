@@ -20,18 +20,21 @@ export const IconCardsRow: React.FC<Props> = () => (
         icon='reactrouter'
         title='Omne animal simul'
         body='At vero eos censes aut officiis debitis aut fugiat aliquid praeter voluptatem ipsam per se repellere idque facere nondum'
+        stroke={0}
       />
       <IconCard
         large
         icon='reactJs'
         title='Filium multavit'
         body='In oculis quidem rerum necessitatibus saepe eveniet ut earum rerum facilis est et dolore disputandum putant sed'
+        stroke={1}
       />
       <IconCard
         large
         icon='redux'
         title='Alii autem quibus'
         body='Quae fuerit causa mox videro interea hoc tenebo si mihi probabis ea quae sine causa quae fuerit causa nollem'
+        stroke={2}
       />
     </IconCardsWrapper>
   </Section>

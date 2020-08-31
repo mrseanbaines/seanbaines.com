@@ -23,21 +23,25 @@ export const IconCardsWithImage: React.FC<Props> = () => (
           icon='html5'
           title='Omne animal simul'
           body='At vero eos censes aut officiis debitis aut fugiat aliquid praeter voluptatem ipsam per se repellere idque facere nondum'
+          stroke={0}
         />
         <IconCard
           icon='css3'
           title='Filium multavit'
           body='In oculis quidem rerum necessitatibus saepe eveniet ut earum rerum facilis est et dolore disputandum putant sed'
+          stroke={1}
         />
         <IconCard
           icon='typescript'
           title='Alii autem quibus'
           body='Quae fuerit causa mox videro interea hoc tenebo si mihi probabis ea quae sine causa quae fuerit causa nollem'
+          stroke={2}
         />
         <IconCard
           icon='javascript'
           title='Magnum periculum'
           body='Ut placet inquam tum dicere exorsus est consecutus laudem et rationibus confirmare tantum satis esse quid est et negent'
+          stroke={3}
         />
       </IconCardsWrapper>
 

@@ -27,7 +27,7 @@ export const gatsbyConfig: GatsbyConfig = {
                     name
                     description
                     url
-                    languages(first: 1, orderBy: { field: SIZE, direction: DESC }) {
+                    languages(first: 3, orderBy: { field: SIZE, direction: DESC }) {
                       nodes {
                         name
                       }

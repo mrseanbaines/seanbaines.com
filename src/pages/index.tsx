@@ -49,7 +49,7 @@ const IndexPage: React.FC<Props> = ({ data }) => {
   const repos = data.githubData.data.user.pinnedItems.nodes.map(repo => ({
     title: repo.name,
     body: repo.description,
-    extra: repo.languages.nodes[0].name,
+    extras: repo.languages.nodes.map(node => node.name),
     url: repo.url,
   }))
 

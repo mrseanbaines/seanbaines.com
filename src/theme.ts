@@ -5,7 +5,7 @@ export const fonts = {
 export const colors = {
   black: '#000000',
   white: '#FFFFFF',
-  grey: ['#454A4F', '#9CA3AF'],
+  grey: ['#454A4F', '#9CA3AF', '#EBEEF2'],
   primary: '#FFB4A2',
   green: '#E5FEC9',
   orange: '#FEE6C6',
@@ -24,7 +24,7 @@ const toMediaQuery = (bp: string) => `@media screen and (min-width: ${bp})`
 
 export const theme = {
   borders: {
-    default: `1px solid ${colors.grey[1]}`,
+    default: `1px solid ${colors.grey[2]}`,
   },
   breakpoints: Object.values(breakpoints),
   colors: {
@@ -62,8 +62,8 @@ export const theme = {
   ],
   fontWeights: {
     medium: 500,
-    semibold: 600,
-    bold: 700,
+    semibold: 580,
+    bold: 720,
   },
   mediaQueries: Object.fromEntries(Object.entries(breakpoints).map(([name, value]) => [name, toMediaQuery(value)])),
   radii: {

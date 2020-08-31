@@ -17,6 +17,7 @@ export const Reset = createGlobalStyle(() => {
       padding: 0;
       scroll-behavior: smooth;
       text-rendering: optimizeSpeed;
+      scrollbar-width: thin;
     }
 
     html {
@@ -28,6 +29,10 @@ export const Reset = createGlobalStyle(() => {
       display: block;
       max-width: 100%;
       user-select: none;
+    }
+
+    a {
+      text-decoration: none;
     }
 
     a,

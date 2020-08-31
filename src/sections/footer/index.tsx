@@ -8,7 +8,7 @@ import { Wrapper } from './styles'
 export type Props = {}
 
 export const Footer: React.FC<Props> = () => (
-  <Wrapper color='muted' weight='bold' mb={2}>
+  <Wrapper color='muted' weight='semibold' mb={2}>
     <Span>Built with</Span>
     <Icon icon='gatsby' color='muted' />
     <Span>and deployed on</Span>

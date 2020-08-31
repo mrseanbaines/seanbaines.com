@@ -12,7 +12,7 @@ export type Props = {}
 export const IconCardsWithImage: React.FC<Props> = () => (
   <Section>
     <Row offset={2}>
-      <Text size={5} weight='bold' textAlign={['right', 'left']}>
+      <Text size={5} weight='bold' textAlign={['right', 'left']} mb={3}>
         Torquatos nostros quos dolores et dolore
       </Text>
     </Row>

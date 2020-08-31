@@ -1,19 +1,31 @@
 import React from 'react'
 
-import { Card } from 'components/card'
+import { Card, Props as CardProps } from 'components/card'
 import { Section } from 'styles/layout'
+import { Text, Span } from 'styles/text'
 
-import { Wrapper } from './styles'
+import { SeeMoreWrapper, CardsWrapper } from './styles'
 
-type Props = {}
+type Props = {
+  items: CardProps[]
+}
 
-export const RotatingCards: React.FC<Props> = () => (
-  <Section fullWidth>
-    <Wrapper>
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-    </Wrapper>
+export const RotatingCards: React.FC<Props> = ({ items }) => (
+  <Section fullWidth noGutter>
+    <Text size={2} textAlign='center' mb={2}>
+      Quid ex ea voluptate velit
+    </Text>
+
+    <CardsWrapper>
+      {items.map(item => (
+        <Card key={item.title} {...item} />
+      ))}
+    </CardsWrapper>
+
+    <SeeMoreWrapper>
+      <Text as='a' size={0} color='muted'>
+        <Span>See more on GitHub</Span>
+      </Text>
+    </SeeMoreWrapper>
   </Section>
 )

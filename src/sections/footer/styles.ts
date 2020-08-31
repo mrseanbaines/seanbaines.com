@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 import { Text } from 'styles/text'
 
-export const Wrapper = styled(Text).attrs({ as: 'div' })(({ theme }) => {
+export const Wrapper = styled(Text).attrs({ as: 'footer' })(({ theme }) => {
   return css`
     display: grid;
     justify-content: center;

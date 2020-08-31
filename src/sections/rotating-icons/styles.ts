@@ -1,12 +1,5 @@
 import styled, { css } from 'styled-components'
 
-export const Wrapper = styled.div(({ theme }) => {
-  return css`
-    display: grid;
-    row-gap: ${theme.space[2]};
-  `
-})
-
 export const IconsWrapper = styled.div(({ theme }) => {
   return css`
     display: grid;
@@ -43,7 +36,6 @@ export const Icons = styled.div(({ theme }) => {
     opacity: 0.4;
     overflow-x: auto;
     overflow-y: hidden;
-    scrollbar-width: thin;
     padding-left: ${theme.space[1]};
     padding-right: ${theme.space[1]};
 

@@ -4,19 +4,23 @@ import { Text } from 'styles/text'
 
 import { Wrapper } from './styles'
 
-type Props = {}
+export type Props = {
+  title: string
+  body: string
+  extra: string
+  url: string
+}
 
-export const Card: React.FC<Props> = () => (
-  <Wrapper>
-    <Text mb={0} weight='bold'>
-      budgie-frontend
+export const Card: React.FC<Props> = ({ title, body, extra, url }) => (
+  <Wrapper as='a' href={url}>
+    <Text weight='semibold' mb={0}>
+      {title}
     </Text>
 
-    <Text size={0} color='muted' mb={2}>
-      SPA React app which pulls in transactions from the backend API, lists them by month, allows you to assign
-      categories and gives you a breakdown of your expenses per category.
+    <Text size={0} color='muted' mb={1}>
+      {body}
     </Text>
 
-    <Text size={0}>TypeScript</Text>
+    <Text size={0}>{extra}</Text>
   </Wrapper>
 )

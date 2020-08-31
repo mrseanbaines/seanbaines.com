@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-const paddingY = css(({ theme }) => {
+export const paddingY = css(({ theme }) => {
   return css`
     padding-top: ${theme.space[3]};
     padding-bottom: ${theme.space[3]};
@@ -12,9 +12,22 @@ const paddingY = css(({ theme }) => {
   `
 })
 
-export const PaddingY = styled.div<SectionProps>(({ theme }) => {
+export const paddingX = css(({ theme }) => {
+  return css`
+    padding-left: ${theme.space[1]};
+    padding-right: ${theme.space[1]};
+  `
+})
+
+export const PaddingY = styled.div<SectionProps>(() => {
   return css`
     ${paddingY}
+  `
+})
+
+export const PaddingX = styled.div<SectionProps>(() => {
+  return css`
+    ${paddingX}
   `
 })
 
@@ -23,10 +36,9 @@ export type SectionProps = {
   noGutter?: boolean
 }
 
-export const Section = styled.section<SectionProps>(({ theme, fullWidth, noGutter }) => {
-  const containerStyles = css`
-    max-width: 1075px;
-    margin: 0 auto;
+export const Section = styled.section<SectionProps>(({ fullWidth, noGutter }) => {
+  const fullWidthStyles = css`
+    max-width: none;
   `
 
   const noGutterStyles = css`
@@ -35,15 +47,12 @@ export const Section = styled.section<SectionProps>(({ theme, fullWidth, noGutte
   `
 
   return css`
+    max-width: 1075px;
+    margin: 0 auto;
+
     ${paddingY}
-
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: ${theme.space[2]};
-    padding-left: ${theme.space[1]};
-    padding-right: ${theme.space[1]};
-
-    ${!fullWidth && containerStyles}
+    ${paddingX}
+    ${fullWidth && fullWidthStyles}
     ${noGutter && noGutterStyles}
   `
 })

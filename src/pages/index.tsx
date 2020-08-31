@@ -7,7 +7,20 @@ import { IconCardsWithImage } from 'sections/icon-cards-with-image'
 import { IconCardsRow } from 'sections/icon-cards-row'
 import { RotatingCards } from 'sections/rotating-cards'
 import { Footer } from 'sections/footer'
-import { PaddingY } from 'styles/layout'
+import { Section } from 'styles/layout'
+
+type RepoLanguage = {
+  name: string
+}
+
+type Repo = {
+  name: string
+  description: string
+  languages: {
+    nodes: RepoLanguage[]
+  }
+  url: string
+}
 
 export type Data = {
   site: {
@@ -19,23 +32,41 @@ export type Data = {
       }
     }
   }
+  githubData: {
+    data: {
+      user: {
+        pinnedItems: {
+          nodes: Repo[]
+        }
+      }
+    }
+  }
 }
 
 export type Props = PageProps<Data>
 
-const IndexPage: React.FC<Props> = ({ data }) => (
-  <>
-    <PaddingY as='main'>
-      <Hero social={data.site.siteMetadata.social} />
-      <RotatingIcons />
-      <IconCardsWithImage />
-      <IconCardsRow />
-      <RotatingCards />
-    </PaddingY>
+const IndexPage: React.FC<Props> = ({ data }) => {
+  const repos = data.githubData.data.user.pinnedItems.nodes.map(repo => ({
+    title: repo.name,
+    body: repo.description,
+    extra: repo.languages.nodes[0].name,
+    url: repo.url,
+  }))
 
-    <Footer />
-  </>
-)
+  return (
+    <>
+      <Section noGutter fullWidth as='main'>
+        <Hero social={data.site.siteMetadata.social} />
+        <RotatingIcons />
+        <IconCardsWithImage />
+        <IconCardsRow />
+        <RotatingCards items={repos} />
+      </Section>
+
+      <Footer />
+    </>
+  )
+}
 
 export const query = graphql`
   query {
@@ -45,6 +76,24 @@ export const query = graphql`
           github
           twitter
           linkedin
+        }
+      }
+    }
+    githubData {
+      data {
+        user {
+          pinnedItems {
+            nodes {
+              name
+              description
+              url
+              languages {
+                nodes {
+                  name
+                }
+              }
+            }
+          }
         }
       }
     }

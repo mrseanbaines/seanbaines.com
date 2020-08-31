@@ -14,11 +14,12 @@ export type TextProps = ThemeProps &
     block?: boolean
     color?: keyof typeof theme.colors.text
     size?: number
+    textLink?: boolean
     upper?: boolean
     weight?: keyof typeof theme.fontWeights
   }
 
-const text = ({ theme, color, size, weight, upper, block }: TextProps) => {
+const text = ({ theme, color, size, weight, upper, block, textLink }: TextProps) => {
   if (isDefined(size) && !theme.fontStyles[size]) {
     throw new Error('Invalid `size` prop')
   }
@@ -29,6 +30,53 @@ const text = ({ theme, color, size, weight, upper, block }: TextProps) => {
 
   const blockStyles = css`
     display: block;
+  `
+
+  const textLinkStyles = css`
+    --border-thickness: 4px;
+    --line-height: ${(isDefined(size) && theme.fontStyles[size]?.lineHeight) || 1.5};
+
+    cursor: pointer;
+    white-space: nowrap;
+    color: transparent;
+    display: inline-block;
+    background-clip: text;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(
+      to bottom,
+      ${theme.colors.text.default} 0%,
+      ${theme.colors.text.default} 50%,
+      ${theme.colors.text.white} 50%,
+      ${theme.colors.text.white} 100%
+    );
+    background-size: auto calc((2em * var(--line-height)) + var(--border-thickness));
+    transition: background-position-y 340ms cubic-bezier(1, -0.5, 0, 1.5);
+    line-height: var(--line-height);
+    position: relative;
+
+    ::after {
+      pointer-events: none;
+      content: '';
+      width: 100%;
+      height: var(--border-thickness);
+      bottom: calc(var(--border-thickness) * -1);
+      left: 0;
+      display: block;
+      background: ${theme.colors.primary};
+      transition: inherit;
+      transition-property: height, bottom;
+      z-index: -1;
+      position: absolute;
+    }
+
+    :hover {
+      background-position-y: 100%;
+
+      ::after {
+        height: 100%;
+        bottom: 0;
+      }
+    }
   `
 
   return css`
@@ -42,6 +90,7 @@ const text = ({ theme, color, size, weight, upper, block }: TextProps) => {
     ${textAlign}
     ${upper && upperStyles}
     ${block && blockStyles}
+    ${textLink && textLinkStyles}
   `
 }
 

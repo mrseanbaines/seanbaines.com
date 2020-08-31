@@ -25,6 +25,7 @@ const toMediaQuery = (bp: string) => `@media screen and (min-width: ${bp})`
 export const theme = {
   borders: {
     default: `1px solid ${colors.grey[2]}`,
+    thickBrand: `2px solid ${colors.primary}`,
   },
   breakpoints: Object.values(breakpoints),
   colors: {
@@ -40,6 +41,7 @@ export const theme = {
       default: colors.grey[0],
       muted: colors.grey[1],
       primary: colors.primary,
+      white: colors.white,
     },
     selection: {
       foreground: colors.white,

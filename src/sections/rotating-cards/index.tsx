@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Card, Props as CardProps } from 'components/card'
 import { Section } from 'styles/layout'
-import { Text, Span } from 'styles/text'
+import { Text } from 'styles/text'
 
 import { SeeMoreWrapper, CardsWrapper } from './styles'
 
@@ -23,8 +23,8 @@ export const RotatingCards: React.FC<Props> = ({ items }) => (
     </CardsWrapper>
 
     <SeeMoreWrapper>
-      <Text as='a' size={0} color='muted'>
-        <Span>See more on GitHub</Span>
+      <Text as='a' size={0} color='muted' textLink>
+        See more on GitHub
       </Text>
     </SeeMoreWrapper>
   </Section>

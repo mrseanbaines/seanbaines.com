@@ -15,7 +15,15 @@ export const gatsbyConfig: GatsbyConfig = {
   plugins: [
     'gatsby-plugin-styled-components',
     {
-      resolve: `gatsby-source-github-api`,
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'data',
+        path: `${__dirname}/src/data`,
+      },
+    },
+    'gatsby-transformer-yaml',
+    {
+      resolve: 'gatsby-source-github-api',
       options: {
         token: process.env.GH_ACCESS_TOKEN,
         graphQLQuery: `

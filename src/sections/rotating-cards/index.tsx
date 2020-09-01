@@ -9,12 +9,17 @@ import { SeeMoreWrapper, CardsWrapper } from './styles'
 
 type Props = {
   items: CardProps[]
+  data: {
+    title: string
+    ctaText: string
+    ctaUrl: string
+  }
 }
 
-export const RotatingCards: React.FC<Props> = ({ items }) => (
+export const RotatingCards: React.FC<Props> = ({ items, data }) => (
   <Section fullWidth noGutter>
     <Text size={2} textAlign='center' mb={2}>
-      Quid ex ea voluptate velit
+      {data.title}
     </Text>
 
     <CardsWrapper>
@@ -24,8 +29,8 @@ export const RotatingCards: React.FC<Props> = ({ items }) => (
     </CardsWrapper>
 
     <SeeMoreWrapper>
-      <Text as={ExternalLink} to='https://github.com/mrseanbaines' size={0} color='muted' textLink draggable={false}>
-        See more on GitHub
+      <Text as={ExternalLink} to={data.ctaUrl} size={0} color='muted' textLink draggable={false}>
+        {data.ctaText}
       </Text>
     </SeeMoreWrapper>
   </Section>

@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@icons-pack/react-simple-icons": "^3.10.0",
-    "gatsby": "2.24.9",
+    "gatsby": "2.24.53",
     "gatsby-plugin-styled-components": "^3.3.10",
+    "gatsby-source-filesystem": "^2.3.27",
     "gatsby-source-github-api": "^0.2.1",
+    "gatsby-transformer-yaml": "^2.4.10",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-components": "^5.1.1",

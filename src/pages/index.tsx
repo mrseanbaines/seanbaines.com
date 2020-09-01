@@ -22,6 +22,13 @@ type Repo = {
   url: string
 }
 
+type IconCard = {
+  title: string
+  body: string
+  // TODO: Make this typesafe
+  icon: any
+}
+
 export type Data = {
   site: {
     siteMetadata: {
@@ -30,6 +37,33 @@ export type Data = {
         twitter: string
         linkedin: string
       }
+    }
+  }
+  dataYaml: {
+    hero: {
+      pretitle: string
+      title: string
+      body: string
+    }
+    rotatingIcons: {
+      title: string
+    }
+    iconCardsWithImage: {
+      title: string
+      cards: IconCard[]
+    }
+    iconCardsRow: {
+      title: string
+      cards: IconCard[]
+    }
+    rotatingCards: {
+      title: string
+      ctaText: string
+      ctaUrl: string
+    }
+    footer: {
+      text1: string
+      text2: string
     }
   }
   githubData: {
@@ -56,14 +90,20 @@ const IndexPage: React.FC<Props> = ({ data }) => {
   return (
     <>
       <Section noGutter fullWidth as='main'>
-        <Hero social={data.site.siteMetadata.social} />
-        <RotatingIcons />
-        <IconCardsWithImage />
-        <IconCardsRow />
-        <RotatingCards items={repos} />
+        <Hero data={{ ...data.dataYaml.hero, social: data.site.siteMetadata.social }} />
+        <RotatingIcons data={data.dataYaml.rotatingIcons} />
+        <IconCardsWithImage data={data.dataYaml.iconCardsWithImage} />
+        <IconCardsRow data={data.dataYaml.iconCardsRow} />
+        <RotatingCards
+          items={repos}
+          data={{
+            ...data.dataYaml.rotatingCards,
+            ctaUrl: data.site.siteMetadata.social.github,
+          }}
+        />
       </Section>
 
-      <Footer />
+      <Footer data={data.dataYaml.footer} />
     </>
   )
 }
@@ -77,6 +117,40 @@ export const query = graphql`
           twitter
           linkedin
         }
+      }
+    }
+    dataYaml {
+      hero {
+        pretitle
+        title
+        body
+      }
+      rotatingIcons {
+        title
+      }
+      iconCardsWithImage {
+        title
+        cards {
+          title
+          body
+          icon
+        }
+      }
+      iconCardsRow {
+        title
+        cards {
+          title
+          body
+          icon
+        }
+      }
+      rotatingCards {
+        title
+        ctaText
+      }
+      footer {
+        text1
+        text2
       }
     }
     githubData {

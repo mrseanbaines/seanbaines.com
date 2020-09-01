@@ -1,0 +1,49 @@
+hero:
+  pretitle: Filium multavit
+  title: Sed ut alterum aspernandum sentiamus alii autem quibus
+  body: Probabo inquit sic agam ut summo bono dolorem eum iure reprehenderit qui blanditiis praesentium voluptatum deleniti atque in sanguinem suum tam egregios viros censes tantas res gessisse
+
+rotatingIcons:
+  title: Quid ex ea voluptate velit
+
+iconCardsWithImage:
+  title: Torquatos nostros quos dolores et dolore
+  cards:
+    - title: Omne animal simul
+      body: At vero eos censes aut officiis debitis aut fugiat aliquid praeter voluptatem ipsam per se repellere idque facere nondum
+      icon: html5
+
+    - title: Filium multavit
+      body: In oculis quidem rerum necessitatibus saepe eveniet ut earum rerum facilis est et dolore disputandum putant sed
+      icon: css3
+
+    - title: Alii autem quibus
+      body: Quae fuerit causa mox videro interea hoc tenebo si mihi probabis ea quae sine causa quae fuerit causa nollem
+      icon: typescript
+
+    - title: Magnum periculum
+      body: Ut placet inquam tum dicere exorsus est consecutus laudem et rationibus confirmare tantum satis esse quid est et negent
+      icon: javascript
+
+iconCardsRow:
+  title: Quae fuerit causa mox
+  cards:
+    - title: Omne animal simul
+      body: At vero eos censes aut officiis debitis aut fugiat aliquid praeter voluptatem ipsam per se repellere idque facere nondum
+      icon: reactrouter
+
+    - title: Filium multavit
+      body: In oculis quidem rerum necessitatibus saepe eveniet ut earum rerum facilis est et dolore disputandum putant sed
+      icon: reactJs
+
+    - title: Alii autem quibus
+      body: Quae fuerit causa mox videro interea hoc tenebo si mihi probabis ea quae sine causa quae fuerit causa nollem
+      icon: redux
+
+rotatingCards:
+  title: Quid ex ea voluptate velit
+  ctaText: See more on GitHub
+
+footer:
+  text1: Built with
+  text2: and deployed on

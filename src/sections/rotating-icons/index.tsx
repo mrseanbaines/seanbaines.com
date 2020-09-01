@@ -6,7 +6,11 @@ import { Icon } from 'components/icon'
 
 import { IconsWrapper, Icons } from './styles'
 
-export type Props = {}
+export type Props = {
+  data: {
+    title: string
+  }
+}
 
 const icons = [
   'babel',
@@ -36,11 +40,11 @@ const icons = [
   'yarn',
 ] as const
 
-export const RotatingIcons: React.FC<Props> = () => (
+export const RotatingIcons: React.FC<Props> = ({ data }) => (
   <Section noGutter fullWidth>
     <PaddingX>
       <Text size={2} textAlign='center' mb={2}>
-        Quid ex ea voluptate velit
+        {data.title}
       </Text>
     </PaddingX>
 

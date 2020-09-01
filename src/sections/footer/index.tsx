@@ -5,13 +5,18 @@ import { Span } from 'styles/text'
 
 import { Wrapper } from './styles'
 
-export type Props = {}
+export type Props = {
+  data: {
+    text1: string
+    text2: string
+  }
+}
 
-export const Footer: React.FC<Props> = () => (
+export const Footer: React.FC<Props> = ({ data }) => (
   <Wrapper color='muted' weight='semibold' mb={2}>
-    <Span>Built with</Span>
+    <Span>{data.text1}</Span>
     <Icon icon='gatsby' color='muted' />
-    <Span>and deployed on</Span>
+    <Span>{data.text2}</Span>
     <Icon icon='vercel' color='muted' />
   </Wrapper>
 )

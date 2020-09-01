@@ -23,6 +23,7 @@ type Repo = {
 }
 
 type IconCard = {
+  id: string
   title: string
   body: string
   // TODO: Make this typesafe
@@ -131,6 +132,7 @@ export const query = graphql`
       iconCardsWithImage {
         title
         cards {
+          id
           title
           body
           icon
@@ -139,6 +141,7 @@ export const query = graphql`
       iconCardsRow {
         title
         cards {
+          id
           title
           body
           icon

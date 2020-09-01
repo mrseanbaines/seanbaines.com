@@ -9,7 +9,7 @@ import { IconCardsWrapper, TitleWrapper } from './styles'
 type Props = {
   data: {
     title: string
-    cards: Pick<IconCardProps, 'title' | 'body' | 'icon'>[]
+    cards: (Pick<IconCardProps, 'title' | 'body' | 'icon'> & { id: string })[]
   }
 }
 
@@ -22,8 +22,8 @@ export const IconCardsRow: React.FC<Props> = ({ data }) => (
     </TitleWrapper>
 
     <IconCardsWrapper>
-      {data.cards.map((card, i) => (
-        <IconCard large icon={card.icon} title={card.title} body={card.body} stroke={i} />
+      {data.cards.map(({ id, ...card }, i) => (
+        <IconCard {...card} stroke={i} large key={id} />
       ))}
     </IconCardsWrapper>
   </Section>

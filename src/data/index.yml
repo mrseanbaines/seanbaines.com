@@ -9,34 +9,41 @@ rotatingIcons:
 iconCardsWithImage:
   title: Torquatos nostros quos dolores et dolore
   cards:
-    - title: Omne animal simul
+    - id: a
+      title: Omne animal simul
       body: At vero eos censes aut officiis debitis aut fugiat aliquid praeter voluptatem ipsam per se repellere idque facere nondum
       icon: html5
 
-    - title: Filium multavit
+    - id: b
+      title: Filium multavit
       body: In oculis quidem rerum necessitatibus saepe eveniet ut earum rerum facilis est et dolore disputandum putant sed
       icon: css3
 
-    - title: Alii autem quibus
+    - id: c
+      title: Alii autem quibus
       body: Quae fuerit causa mox videro interea hoc tenebo si mihi probabis ea quae sine causa quae fuerit causa nollem
       icon: typescript
 
-    - title: Magnum periculum
+    - id: d
+      title: Magnum periculum
       body: Ut placet inquam tum dicere exorsus est consecutus laudem et rationibus confirmare tantum satis esse quid est et negent
       icon: javascript
 
 iconCardsRow:
   title: Quae fuerit causa mox
   cards:
-    - title: Omne animal simul
+    - id: e
+      title: Omne animal simul
       body: At vero eos censes aut officiis debitis aut fugiat aliquid praeter voluptatem ipsam per se repellere idque facere nondum
       icon: reactrouter
 
-    - title: Filium multavit
+    - id: f
+      title: Filium multavit
       body: In oculis quidem rerum necessitatibus saepe eveniet ut earum rerum facilis est et dolore disputandum putant sed
       icon: reactJs
 
-    - title: Alii autem quibus
+    - id: g
+      title: Alii autem quibus
       body: Quae fuerit causa mox videro interea hoc tenebo si mihi probabis ea quae sine causa quae fuerit causa nollem
       icon: redux
 

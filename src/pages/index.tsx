@@ -99,7 +99,7 @@ const IndexPage: React.FC<Props> = ({ data }) => {
           items={repos}
           data={{
             ...data.dataYaml.rotatingCards,
-            ctaUrl: data.site.siteMetadata.social.github,
+            ctaUrl: `https://github.com/${data.site.siteMetadata.social.github}`,
           }}
         />
       </Section>

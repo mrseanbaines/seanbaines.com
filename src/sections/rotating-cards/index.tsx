@@ -29,9 +29,11 @@ export const RotatingCards: React.FC<Props> = ({ items, data }) => (
     </CardsWrapper>
 
     <SeeMoreWrapper>
-      <Text as={ExternalLink} to={data.ctaUrl} size={0} color='muted' textLink draggable={false}>
-        {data.ctaText}
-      </Text>
+      <ExternalLink to={data.ctaUrl}>
+        <Text as='span' size={0} color='muted' textLink draggable={false}>
+          {data.ctaText}
+        </Text>
+      </ExternalLink>
     </SeeMoreWrapper>
   </Section>
 )

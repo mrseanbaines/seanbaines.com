@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { ExternalLink } from 'components/external-link'
 import { Card, Props as CardProps } from 'components/card'
 import { Section } from 'styles/layout'
 import { Text } from 'styles/text'
@@ -23,15 +24,7 @@ export const RotatingCards: React.FC<Props> = ({ items }) => (
     </CardsWrapper>
 
     <SeeMoreWrapper>
-      <Text
-        as='a'
-        href='https://github.com/mrseanbaines'
-        target='_blank'
-        rel='noreferrer'
-        size={0}
-        color='muted'
-        textLink
-      >
+      <Text as={ExternalLink} to='https://github.com/mrseanbaines' size={0} color='muted' textLink>
         See more on GitHub
       </Text>
     </SeeMoreWrapper>

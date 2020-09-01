@@ -10,5 +10,11 @@ export const Wrapper = styled(Text).attrs({ as: 'footer' })(({ theme }) => {
     grid-auto-flow: column;
     gap: ${theme.space[0]};
     opacity: 0.6;
+
+    a:hover,
+    a:focus,
+    a:active {
+      color: ${theme.colors.icons.default};
+    }
   `
 })

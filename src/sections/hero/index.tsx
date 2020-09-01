@@ -3,6 +3,7 @@ import React from 'react'
 import { Section, Row } from 'styles/layout'
 import { Text, Span } from 'styles/text'
 import { Icon } from 'components/icon'
+import { ExternalLink } from 'components/external-link'
 
 import { TitleWrapper, Icons } from './styles'
 
@@ -54,15 +55,15 @@ export const Hero: React.FC<Props> = ({ social }) => (
         </Text>
 
         <Icons>
-          <a href={`https://github.com/${social.github}`} target='_blank' rel='noreferrer'>
+          <ExternalLink to={`https://github.com/${social.github}`}>
             <Icon icon='github' />
-          </a>
-          <a href={`https://twitter.com/${social.twitter}`} target='_blank' rel='noreferrer'>
+          </ExternalLink>
+          <ExternalLink to={`https://twitter.com/${social.twitter}`}>
             <Icon icon='twitter' />
-          </a>
-          <a href={`https://www.linkedin.com/in/${social.linkedin}`} target='_blank' rel='noreferrer'>
+          </ExternalLink>
+          <ExternalLink to={`https://www.linkedin.com/in/${social.linkedin}`}>
             <Icon icon='linkedin' />
-          </a>
+          </ExternalLink>
         </Icons>
       </div>
     </Row>

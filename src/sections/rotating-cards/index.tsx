@@ -24,7 +24,7 @@ export const RotatingCards: React.FC<Props> = ({ items }) => (
     </CardsWrapper>
 
     <SeeMoreWrapper>
-      <Text as={ExternalLink} to='https://github.com/mrseanbaines' size={0} color='muted' textLink>
+      <Text as={ExternalLink} to='https://github.com/mrseanbaines' size={0} color='muted' textLink draggable={false}>
         See more on GitHub
       </Text>
     </SeeMoreWrapper>

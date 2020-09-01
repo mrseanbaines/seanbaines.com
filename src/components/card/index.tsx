@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { ExternalLink } from 'components/external-link'
 import { Text } from 'styles/text'
 
 import { Wrapper } from './styles'
@@ -12,7 +13,7 @@ export type Props = {
 }
 
 export const Card: React.FC<Props> = ({ title, body, extras, url }) => (
-  <Wrapper as='a' href={url}>
+  <Wrapper as={ExternalLink} to={url} draggable={false}>
     <Text weight='semibold' mb={0}>
       {title}
     </Text>

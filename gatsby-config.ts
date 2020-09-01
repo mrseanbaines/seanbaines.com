@@ -5,7 +5,6 @@ config()
 
 export const gatsbyConfig: GatsbyConfig = {
   siteMetadata: {
-    siteName: 'mrseanbaines',
     social: {
       github: 'mrseanbaines',
       twitter: 'mrseanbaines',

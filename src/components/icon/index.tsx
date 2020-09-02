@@ -1,9 +1,12 @@
 import React from 'react'
 import * as simpleIcons from '@icons-pack/react-simple-icons'
+import { SpaceProps } from 'styled-system'
 
+import { ReactComponent as ContactIcon } from 'images/contact.svg'
+import { ReactComponent as HeartIcon } from 'images/heart.svg'
 import { theme } from 'theme'
 
-import { IconWrapper, IconWrapperProps } from './styles'
+import { IconWrapper } from './styles'
 
 const icons = {
   babel: simpleIcons.Babel,
@@ -33,15 +36,17 @@ const icons = {
   visualstudiocode: simpleIcons.Visualstudiocode,
   webpack: simpleIcons.Webpack,
   yarn: simpleIcons.Yarn,
+  contact: ContactIcon,
+  heart: HeartIcon,
 }
 
-export type Props = IconWrapperProps & {
+export type Props = SpaceProps & {
   color?: keyof typeof theme.colors.icons
   size?: number
   icon: keyof typeof icons
 }
 
-export const Icon: React.FC<Props> = ({ color = 'default', size = 0, icon, ...props }) => {
+export const Icon: React.FC<Props> = ({ color = 'default', size = 0, icon }) => {
   if (!!size && !theme.sizes.icon[size]) {
     throw new Error('Invalid `size` prop')
   }
@@ -49,8 +54,8 @@ export const Icon: React.FC<Props> = ({ color = 'default', size = 0, icon, ...pr
   const IconComponent = icons[icon]
 
   return (
-    <IconWrapper {...props}>
-      <IconComponent color={theme.colors.icons[color]} size={theme.sizes.icon[size]} />
+    <IconWrapper color={color} size={size}>
+      <IconComponent color='currentColor' />
     </IconWrapper>
   )
 }

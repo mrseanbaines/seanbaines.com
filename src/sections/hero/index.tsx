@@ -5,7 +5,7 @@ import { Text, Span } from 'styles/text'
 import { Icon } from 'components/icon'
 import { ExternalLink } from 'components/external-link'
 
-import { TitleWrapper, Icons } from './styles'
+import { TitleWrapper, Icons, CTA, CTAGroup } from './styles'
 
 export type Props = {
   data: {
@@ -31,9 +31,25 @@ export const Hero: React.FC<Props> = ({ data }) => (
           </Span>
         </Text>
 
-        <Text size={4} weight='bold' color='primary'>
+        <Text size={4} weight='bold' color='primary' mb={2}>
           (mrseanbaines)
         </Text>
+
+        <CTAGroup>
+          <a href='mailto:mrseanbaines@gmail.com'>
+            <CTA>
+              <Icon icon='contact' />
+              <Text size={0}>Get in touch</Text>
+            </CTA>
+          </a>
+
+          <button type='button'>
+            <CTA>
+              <Icon icon='heart' />
+              <Text size={0}>Like</Text>
+            </CTA>
+          </button>
+        </CTAGroup>
       </TitleWrapper>
 
       <div>

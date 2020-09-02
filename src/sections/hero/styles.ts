@@ -16,7 +16,7 @@ export const Icons = styled.div(({ theme }) => {
       :focus,
       :active {
         svg {
-          fill: ${theme.colors.icons.muted};
+          color: ${theme.colors.icons.muted};
         }
       }
     }
@@ -47,5 +47,34 @@ export const TitleWrapper = styled.div(({ theme }) => {
         height: 600px;
       }
     }
+  `
+})
+
+export const CTAGroup = styled.div(({ theme }) => {
+  return css`
+    display: grid;
+    gap: ${theme.space[1]};
+    grid-auto-flow: column;
+    justify-content: start;
+
+    a,
+    button {
+      line-height: 0;
+
+      :hover,
+      :focus,
+      :active {
+        * {
+          color: ${theme.colors.icons.muted};
+        }
+      }
+    }
+  `
+})
+
+export const CTA = styled.div(({ theme }) => {
+  return css`
+    display: grid;
+    justify-items: center;
   `
 })

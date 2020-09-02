@@ -15,6 +15,12 @@ export const gatsbyConfig: GatsbyConfig = {
     },
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-svgr',
+      options: {
+        svgo: false,
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {

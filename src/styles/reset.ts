@@ -41,6 +41,7 @@ export const Reset = createGlobalStyle(() => {
     [type='reset'],
     [type='submit'] {
       cursor: pointer;
+      outline: none;
     }
   `
 })

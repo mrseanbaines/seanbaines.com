@@ -70,7 +70,9 @@ const text = ({ theme, color, size, weight, upper, block, textLink }: TextProps)
       position: absolute;
     }
 
-    :hover {
+    :hover,
+    :focus,
+    :active {
       background-position-y: 100%;
 
       ::after {

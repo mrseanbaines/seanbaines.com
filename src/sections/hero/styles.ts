@@ -11,6 +11,14 @@ export const Icons = styled.div(({ theme }) => {
 
     a {
       line-height: 0;
+
+      :hover,
+      :focus,
+      :active {
+        svg {
+          fill: ${theme.colors.icons.muted};
+        }
+      }
     }
   `
 })

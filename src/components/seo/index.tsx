@@ -16,6 +16,7 @@ export type Data = {
     }
   }
   meta: {
+    title: string
     description: string
     keywords: string[]
   }
@@ -31,7 +32,7 @@ export const SEO: React.FC<Props> = ({ location }) => {
   const seo = {
     langCode: 'en',
     countryCode: 'gb',
-    title: siteName,
+    title: data.meta.title,
     description: data.meta.description,
     canonicalUrl: url.href,
     keywords: data.meta.keywords.join(', '),
@@ -79,6 +80,7 @@ const query = graphql`
       }
     }
     meta {
+      title
       description
       keywords
     }

@@ -3,6 +3,8 @@ import { graphql, useStaticQuery, PageProps } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
 import openGraphImage from 'images/og-image.png'
+import favicon_32x32 from 'images/favicon-32x32.png'
+import favicon_16x16 from 'images/favicon-16x16.png'
 
 export type Data = {
   site: {
@@ -46,6 +48,8 @@ export const SEO: React.FC<Props> = ({ location }) => {
       <meta name='keywords' content={seo.keywords} />
 
       <link rel='canonical' href={seo.canonicalUrl} />
+      <link rel='icon' type='image/png' href={favicon_32x32} sizes='32x32' />
+      <link rel='icon' type='image/png' href={favicon_16x16} sizes='16x16' />
 
       <meta name='twitter:card' content='summary' />
       <meta name='twitter:creator' content={`@${social.twitter}`} />

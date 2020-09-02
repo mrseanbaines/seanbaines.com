@@ -1,8 +1,8 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery, PageProps } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
-// const openGraphImage = 'images/'
+import openGraphImage from 'images/og-image.png'
 
 export type Data = {
   site: {
@@ -19,19 +19,21 @@ export type Data = {
   }
 }
 
-export const SEO: React.FC = () => {
+type Props = Omit<PageProps, 'children'>
+
+export const SEO: React.FC<Props> = ({ location }) => {
   const data = useStaticQuery<Data>(query)
   const { social, siteName } = data.site.siteMetadata
-  // const siteUrl = process.env.GATSBY_SITE_URL || location.origin
+  const url = new URL(location.pathname, process.env.SITE_URL || location.origin)
 
   const seo = {
     langCode: 'en',
     countryCode: 'gb',
     title: siteName,
     description: data.meta.description,
-    // canonicalUrl: `${siteUrl}${location.pathname}`,
+    canonicalUrl: url.href,
     keywords: data.meta.keywords.join(', '),
-    // openGraphImage,
+    openGraphImage: new URL(openGraphImage, url).href,
   }
 
   return (
@@ -43,19 +45,21 @@ export const SEO: React.FC = () => {
       <meta name='description' content={seo.description} />
       <meta name='keywords' content={seo.keywords} />
 
-      {/* <link rel='canonical' href={seo.canonicalUrl} /> */}
+      <link rel='canonical' href={seo.canonicalUrl} />
 
       <meta name='twitter:card' content='summary' />
       <meta name='twitter:creator' content={`@${social.twitter}`} />
       <meta name='twitter:site' content={`@${social.twitter}`} />
 
       <meta property='og:description' content={seo.description} />
-      {/* <meta property='og:image' content={seo.openGraphImage} /> */}
+      <meta property='og:image' content={seo.openGraphImage} />
+      <meta property='og:image:width' content='1200' />
+      <meta property='og:image:height' content='630' />
       <meta property='og:locale' content={`${seo.langCode}_${seo.countryCode}`} />
       <meta property='og:site_name' content={siteName} />
       <meta property='og:title' content={seo.title} />
       <meta property='og:type' content='website' />
-      {/* <meta property='og:url' content={seo.canonicalUrl} /> */}
+      <meta property='og:url' content={seo.canonicalUrl} />
     </Helmet>
   )
 }

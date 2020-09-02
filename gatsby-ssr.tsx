@@ -7,4 +7,4 @@ import { WrapPageElement } from 'components/wrap-page-element'
 type RequiredWrapPageElement = Required<GatsbySSR>['wrapPageElement']
 type Fn = (...args: Parameters<RequiredWrapPageElement>) => ReturnType<RequiredWrapPageElement>
 
-export const wrapPageElement: Fn = ({ element }) => <WrapPageElement>{element}</WrapPageElement>
+export const wrapPageElement: Fn = ({ element, props }) => <WrapPageElement {...props}>{element}</WrapPageElement>

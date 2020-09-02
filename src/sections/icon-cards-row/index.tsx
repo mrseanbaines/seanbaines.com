@@ -16,8 +16,8 @@ type Props = {
 export const IconCardsRow: React.FC<Props> = ({ data }) => (
   <Section>
     <TitleWrapper>
-      <Text size={5} weight='bold' textAlign='center' mb={3}>
-        Quae fuerit causa mox
+      <Text as='h2' size={5} weight='bold' textAlign='center' mb={3}>
+        {data.title}
       </Text>
     </TitleWrapper>
 

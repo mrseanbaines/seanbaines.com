@@ -43,7 +43,7 @@ const icons = [
 export const RotatingIcons: React.FC<Props> = ({ data }) => (
   <Section noGutter fullWidth>
     <PaddingX>
-      <Text size={2} textAlign='center' mb={2}>
+      <Text as='h2' size={2} textAlign='center' mb={2}>
         {data.title}
       </Text>
     </PaddingX>

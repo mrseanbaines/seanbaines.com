@@ -19,7 +19,7 @@ export const IconCard: React.FC<Props> = ({ icon, title, body, large, stroke }) 
       <Icon icon={icon} size={large ? 2 : 1} />
     </IconWrapper>
 
-    <Text size={large ? 3 : 2} mb={0}>
+    <Text as='h3' size={large ? 3 : 2} mb={0}>
       {title}
     </Text>
 

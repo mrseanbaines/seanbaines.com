@@ -24,7 +24,7 @@ export const Hero: React.FC<Props> = ({ data }) => (
   <Section>
     <Row offset={1}>
       <TitleWrapper>
-        <Text size={7} weight='bold' upper>
+        <Text as='h1' size={7} weight='bold' upper>
           Sean{' '}
           <Span size={6} block>
             Baines
@@ -38,11 +38,11 @@ export const Hero: React.FC<Props> = ({ data }) => (
 
       <div>
         <hgroup>
-          <Text size={2} color='muted' mb={0}>
+          <Text as='h2' size={2} color='muted' mb={0}>
             {data.pretitle}
           </Text>
 
-          <Text as='h1' size={4} mb={1}>
+          <Text as='h3' size={4} mb={1}>
             {data.title}
           </Text>
         </hgroup>

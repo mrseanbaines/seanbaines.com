@@ -1,4 +1,4 @@
-# Gatsby files
 .cache/
-public/
 .env
+.vercel/
+public/

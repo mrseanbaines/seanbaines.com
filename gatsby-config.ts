@@ -5,6 +5,7 @@ config()
 
 export const gatsbyConfig: GatsbyConfig = {
   siteMetadata: {
+    siteName: 'mrseanbaines',
     social: {
       github: 'mrseanbaines',
       twitter: 'mrseanbaines',
@@ -12,6 +13,7 @@ export const gatsbyConfig: GatsbyConfig = {
     },
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-source-filesystem',
@@ -20,7 +22,12 @@ export const gatsbyConfig: GatsbyConfig = {
         path: `${__dirname}/src/data`,
       },
     },
-    'gatsby-transformer-yaml',
+    {
+      resolve: `gatsby-transformer-yaml`,
+      options: {
+        typeName: ({ node }: any) => node.name,
+      },
+    },
     {
       resolve: 'gatsby-source-github-api',
       options: {

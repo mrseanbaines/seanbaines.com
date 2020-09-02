@@ -11,17 +11,20 @@
   "dependencies": {
     "@icons-pack/react-simple-icons": "^3.10.0",
     "gatsby": "2.24.53",
+    "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-styled-components": "^3.3.10",
     "gatsby-source-filesystem": "^2.3.27",
     "gatsby-source-github-api": "^0.2.1",
     "gatsby-transformer-yaml": "^2.4.10",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
     "styled-components": "^5.1.1",
     "styled-system": "^5.1.5"
   },
   "devDependencies": {
     "@mrseanbaines/prettier-config": "^1.1.0",
+    "@types/react-helmet": "^6.1.0",
     "@types/styled-components": "^5.1.2",
     "@types/styled-system": "^5.1.10",
     "@types/webpack": "^4.41.21",

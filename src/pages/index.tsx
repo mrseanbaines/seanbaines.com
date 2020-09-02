@@ -40,7 +40,7 @@ export type Data = {
       }
     }
   }
-  dataYaml: {
+  main: {
     hero: {
       pretitle: string
       title: string
@@ -91,20 +91,20 @@ const IndexPage: React.FC<Props> = ({ data }) => {
   return (
     <>
       <Section noGutter fullWidth as='main'>
-        <Hero data={{ ...data.dataYaml.hero, social: data.site.siteMetadata.social }} />
-        <RotatingIcons data={data.dataYaml.rotatingIcons} />
-        <IconCardsWithImage data={data.dataYaml.iconCardsWithImage} />
-        <IconCardsRow data={data.dataYaml.iconCardsRow} />
+        <Hero data={{ ...data.main.hero, social: data.site.siteMetadata.social }} />
+        <RotatingIcons data={data.main.rotatingIcons} />
+        <IconCardsWithImage data={data.main.iconCardsWithImage} />
+        <IconCardsRow data={data.main.iconCardsRow} />
         <RotatingCards
           items={repos}
           data={{
-            ...data.dataYaml.rotatingCards,
+            ...data.main.rotatingCards,
             ctaUrl: `https://github.com/${data.site.siteMetadata.social.github}`,
           }}
         />
       </Section>
 
-      <Footer data={data.dataYaml.footer} />
+      <Footer data={data.main.footer} />
     </>
   )
 }
@@ -120,7 +120,7 @@ export const query = graphql`
         }
       }
     }
-    dataYaml {
+    main {
       hero {
         pretitle
         title

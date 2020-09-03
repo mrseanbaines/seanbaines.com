@@ -22,15 +22,22 @@ export type Props = {
 }
 
 export const Hero: React.FC<Props> = ({ data }) => {
-  const [liked, toggleLiked] = useToggle(typeof window !== 'undefined' && !!window.localStorage.getItem('liked'))
+  const [liked, toggleLiked, setLiked] = useToggle()
+
+  const LIKED_KEY = 'liked'
+  const LIKED_VALUE = 'true'
 
   React.useEffect(() => {
-    const LIKED = 'liked'
+    if (!!window.localStorage.getItem(LIKED_KEY)) {
+      setLiked(true)
+    }
+  }, [setLiked])
 
+  React.useEffect(() => {
     if (liked) {
-      window.localStorage.setItem(LIKED, 'true')
+      window.localStorage.setItem(LIKED_KEY, LIKED_VALUE)
     } else {
-      window.localStorage.removeItem(LIKED)
+      window.localStorage.removeItem(LIKED_KEY)
     }
   }, [liked])
 

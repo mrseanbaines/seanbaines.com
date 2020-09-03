@@ -22,7 +22,7 @@ export type Props = {
 }
 
 export const Hero: React.FC<Props> = ({ data }) => {
-  const [liked, toggleLiked] = useToggle(!!window.localStorage.getItem('liked'))
+  const [liked, toggleLiked] = useToggle(typeof window !== 'undefined' && !!window.localStorage.getItem('liked'))
 
   React.useEffect(() => {
     const LIKED = 'liked'

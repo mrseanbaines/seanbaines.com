@@ -61,5 +61,8 @@
     ]
   },
   "prettier": "@mrseanbaines/prettier-config",
-  "private": true
+  "private": true,
+  "resolutions": {
+    "babel-plugin-remove-graphql-queries": "2.9.4"
+  }
 }

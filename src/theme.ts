@@ -11,6 +11,7 @@ export const colors = {
   orange: '#FEE6C6',
   red: '#FEE0E0',
   yellow: '#FFF7CC',
+  deepRed: '#ff6c6c',
 }
 
 const breakpoints = {
@@ -36,6 +37,7 @@ export const theme = {
     icons: {
       default: colors.grey[0],
       muted: colors.grey[1],
+      danger: colors.deepRed,
     },
     text: {
       default: colors.grey[0],

@@ -1,5 +1,6 @@
-import styled, { css } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 
+import { IconWrapper } from 'components/icon/styles'
 import circle from 'images/circle.svg'
 
 export const Icons = styled.div(({ theme }) => {
@@ -57,17 +58,12 @@ export const CTAGroup = styled.div(({ theme }) => {
     grid-auto-flow: column;
     justify-content: start;
 
-    a,
-    button {
-      line-height: 0;
+    ${IconWrapper} {
+      transition: all 100ms;
+    }
 
-      :hover,
-      :focus,
-      :active {
-        * {
-          color: ${theme.colors.icons.muted};
-        }
-      }
+    *:hover ${IconWrapper}, *:focus ${IconWrapper}, *:active ${IconWrapper} {
+      transform: scale(1.1);
     }
   `
 })
@@ -76,5 +72,66 @@ export const CTA = styled.div(({ theme }) => {
   return css`
     display: grid;
     justify-items: center;
+    gap: ${theme.space[0]};
+  `
+})
+
+type HeartCTAProps = {
+  liked?: boolean
+}
+
+export const HeartCTA = styled(CTA)<HeartCTAProps>(({ theme, liked }) => {
+  const heart = keyframes`
+    40% {
+      transform: scale(0);
+    }
+    80% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  `
+
+  const pop = keyframes`
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  `
+
+  const likedStyles = css`
+    > ${IconWrapper} {
+      color: ${theme.colors.icons.danger};
+      position: relative;
+
+      svg {
+        animation: ${heart} 300ms;
+
+        * {
+          fill: currentColor;
+        }
+      }
+
+      ::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: currentColor;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        border-radius: 9999em;
+        transform: scale(0);
+        animation: ${pop} 300ms;
+      }
+    }
+  `
+
+  return css`
+    ${liked && likedStyles}
   `
 })

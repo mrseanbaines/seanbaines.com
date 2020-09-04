@@ -27,7 +27,7 @@ type Props = Omit<PageProps, 'children'>
 export const SEO: React.FC<Props> = ({ location }) => {
   const data = useStaticQuery<Data>(query)
   const { social, siteName } = data.site.siteMetadata
-  const url = new URL(location.pathname, process.env.SITE_URL || location.origin)
+  const url = new URL(location.pathname, process.env.GATSBY_SITE_URL || location.origin)
 
   const seo = {
     langCode: 'en',

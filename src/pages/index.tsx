@@ -91,10 +91,19 @@ const IndexPage: React.FC<Props> = ({ data }) => {
   return (
     <>
       <Section noGutter fullWidth as='main'>
-        <Hero data={{ ...data.main.hero, social: data.site.siteMetadata.social }} />
+        <Hero
+          data={{
+            ...data.main.hero,
+            social: data.site.siteMetadata.social,
+          }}
+        />
+
         <RotatingIcons data={data.main.rotatingIcons} />
+
         <IconCardsWithImage data={data.main.iconCardsWithImage} />
+
         <IconCardsRow data={data.main.iconCardsRow} />
+
         <RotatingCards
           items={repos}
           data={{

@@ -1,4 +1,10 @@
+# gatsby files
 .cache/
-.env
-.vercel/
 public/
+
+# environment variables files
+.env*
+!.env.example
+
+# deployment files
+.vercel/

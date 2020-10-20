@@ -10,6 +10,7 @@ export type Data = {
   site: {
     siteMetadata: {
       siteName: string
+      author: string
       social: {
         twitter: string
       }
@@ -26,7 +27,7 @@ type Props = Omit<PageProps, 'children'>
 
 export const SEO: React.FC<Props> = ({ location }) => {
   const data = useStaticQuery<Data>(query)
-  const { social, siteName } = data.site.siteMetadata
+  const { social, siteName, author } = data.site.siteMetadata
   const url = new URL(location.pathname, process.env.GATSBY_SITE_URL || location.origin)
 
   const seo = {
@@ -37,6 +38,8 @@ export const SEO: React.FC<Props> = ({ location }) => {
     canonicalUrl: url.href,
     keywords: data.meta.keywords.join(', '),
     openGraphImage: new URL(openGraphImage, url).href,
+    siteName,
+    author,
   }
 
   return (
@@ -47,6 +50,7 @@ export const SEO: React.FC<Props> = ({ location }) => {
 
       <meta name='description' content={seo.description} />
       <meta name='keywords' content={seo.keywords} />
+      <meta name='author' content={seo.author} />
 
       <link rel='canonical' href={seo.canonicalUrl} />
       <link rel='icon' type='image/png' href={favicon_32x32} sizes='32x32' />
@@ -61,7 +65,7 @@ export const SEO: React.FC<Props> = ({ location }) => {
       <meta property='og:image:width' content='1200' />
       <meta property='og:image:height' content='630' />
       <meta property='og:locale' content={`${seo.langCode}_${seo.countryCode}`} />
-      <meta property='og:site_name' content={siteName} />
+      <meta property='og:site_name' content={seo.siteName} />
       <meta property='og:title' content={seo.title} />
       <meta property='og:type' content='website' />
       <meta property='og:url' content={seo.canonicalUrl} />
@@ -74,6 +78,7 @@ const query = graphql`
     site {
       siteMetadata {
         siteName
+        author
         social {
           twitter
         }

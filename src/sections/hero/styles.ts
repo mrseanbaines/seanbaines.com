@@ -16,7 +16,7 @@ export const Icons = styled.div(({ theme }) => {
       :hover,
       :focus,
       :active {
-        svg {
+        * {
           color: ${theme.colors.icons.muted};
         }
       }

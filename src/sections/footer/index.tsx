@@ -15,8 +15,8 @@ export type Props = {
 export const Footer: React.FC<Props> = ({ data }) => (
   <Wrapper color='muted' weight='semibold' mb={2}>
     <Span>{data.text1}</Span>
-    <Icon icon='gatsby' color='muted' />
+    <Icon icon='SiGatsby' color='muted' />
     <Span>{data.text2}</Span>
-    <Icon icon='vercel' color='muted' />
+    <Icon icon='SiZeit' color='muted' />
   </Wrapper>
 )

@@ -1,54 +1,54 @@
 hero:
-  pretitle: Filium multavit
-  title: Sed ut alterum aspernandum sentiamus alii autem quibus
-  body: Probabo inquit sic agam ut summo bono dolorem eum iure reprehenderit qui blanditiis praesentium voluptatum deleniti atque in sanguinem suum tam egregios viros censes tantas res gessisse
+  pretitle: Introduction
+  title: Product and website developer, based in London.
+  body: I build applications and websites using a modern tech stack, specialising in React development. I have a passion for writing clean, modular code, and a desire to constantly improve and add to my skills.
 
 rotatingIcons:
-  title: Quid ex ea voluptate velit
+  title: Some things I use
 
 iconCardsWithImage:
-  title: Torquatos nostros quos dolores et dolore
+  title: A little bit about me
   cards:
     - id: a
-      title: Omne animal simul
-      body: At vero eos censes aut officiis debitis aut fugiat aliquid praeter voluptatem ipsam per se repellere idque facere nondum
-      icon: html5
+      title: Passionately driven
+      body: I'm passionate about development. It's more than a job to me, it's also my hobby.
+      icon: AiOutlineHeart
 
     - id: b
-      title: Filium multavit
-      body: In oculis quidem rerum necessitatibus saepe eveniet ut earum rerum facilis est et dolore disputandum putant sed
-      icon: css3
+      title: Sweat the details
+      body: I love spending focusing on the details and interactions that make a product enjoyable to use.
+      icon: FaRegGrinBeamSweat
 
     - id: c
-      title: Alii autem quibus
-      body: Quae fuerit causa mox videro interea hoc tenebo si mihi probabis ea quae sine causa quae fuerit causa nollem
-      icon: typescript
+      title: Eye for design
+      body: I've always had an affinity for design and often spend time designing my own side projects.
+      icon: RiPaintFill
 
     - id: d
-      title: Magnum periculum
-      body: Ut placet inquam tum dicere exorsus est consecutus laudem et rationibus confirmare tantum satis esse quid est et negent
-      icon: javascript
+      title: Always learning
+      body: I'm never content with what I already know and am constantly looking for ways to improve.
+      icon: VscBook
 
 iconCardsRow:
-  title: Quae fuerit causa mox
+  title: A few favourites
   cards:
     - id: e
-      title: Omne animal simul
-      body: At vero eos censes aut officiis debitis aut fugiat aliquid praeter voluptatem ipsam per se repellere idque facere nondum
-      icon: reactrouter
+      title: React
+      body: React is my framework of choice. Modular, hook-based, functional components are definitely my cup of tea.
+      icon: SiReact
 
     - id: f
-      title: Filium multavit
-      body: In oculis quidem rerum necessitatibus saepe eveniet ut earum rerum facilis est et dolore disputandum putant sed
-      icon: reactJs
+      title: TypeScript
+      body: I rarely build a project without TypeScript these days. Strict types and next generation JavaScript? Yes please.
+      icon: SiTypescript
 
     - id: g
-      title: Alii autem quibus
-      body: Quae fuerit causa mox videro interea hoc tenebo si mihi probabis ea quae sine causa quae fuerit causa nollem
-      icon: redux
+      title: GraphQL
+      body: I've recently been using GraphQL on both ends of the stack and have been very much enjoying building with it.
+      icon: SiGraphql
 
 rotatingCards:
-  title: Quid ex ea voluptate velit
+  title: Some things I've built
   ctaText: See more on GitHub
 
 footer:

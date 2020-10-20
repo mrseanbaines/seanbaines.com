@@ -59,14 +59,14 @@ export const Hero: React.FC<Props> = ({ data }) => {
           <CTAGroup>
             <a href='mailto:mrseanbaines@gmail.com'>
               <CTA>
-                <Icon icon='contact' />
+                <Icon icon='ContactIcon' />
                 <Text size={0}>Get in touch</Text>
               </CTA>
             </a>
 
             <button type='button' onClick={toggleLiked}>
               <HeartCTA liked={liked}>
-                <Icon icon='heart' />
+                <Icon icon='HeartIcon' />
                 <Text size={0}>Like</Text>
               </HeartCTA>
             </button>
@@ -90,13 +90,13 @@ export const Hero: React.FC<Props> = ({ data }) => {
 
           <Icons>
             <ExternalLink to={`https://github.com/${data.social.github}`}>
-              <Icon icon='github' />
+              <Icon icon='GrGithub' />
             </ExternalLink>
             <ExternalLink to={`https://twitter.com/${data.social.twitter}`}>
-              <Icon icon='twitter' />
+              <Icon icon='GrTwitter' />
             </ExternalLink>
             <ExternalLink to={`https://www.linkedin.com/in/${data.social.linkedin}`}>
-              <Icon icon='linkedin' />
+              <Icon icon='GrLinkedinOption' />
             </ExternalLink>
           </Icons>
         </div>

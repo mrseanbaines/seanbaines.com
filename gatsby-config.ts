@@ -8,6 +8,7 @@ config({
 export const gatsbyConfig: GatsbyConfig = {
   siteMetadata: {
     siteName: 'mrseanbaines',
+    author: 'Sean Baines',
     social: {
       github: 'mrseanbaines',
       twitter: 'mrseanbaines',

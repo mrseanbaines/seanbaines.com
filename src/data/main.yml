@@ -16,7 +16,7 @@ iconCardsWithImage:
 
     - id: b
       title: Sweat the details
-      body: I love spending focusing on the details and interactions that make a product enjoyable to use.
+      body: I love spending time focusing on the details and interactions that make a product enjoyable to use.
       icon: FaRegGrinBeamSweat
 
     - id: c

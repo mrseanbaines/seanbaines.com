@@ -37,6 +37,7 @@ export type Data = {
         github: string
         twitter: string
         linkedin: string
+        medium: string
       }
     }
   }
@@ -126,6 +127,7 @@ export const query = graphql`
           github
           twitter
           linkedin
+          medium
         }
       }
     }

@@ -17,6 +17,7 @@ export type Props = {
       github: string
       twitter: string
       linkedin: string
+      medium: string
     }
   }
 }
@@ -97,6 +98,9 @@ export const Hero: React.FC<Props> = ({ data }) => {
             </ExternalLink>
             <ExternalLink to={`https://www.linkedin.com/in/${data.social.linkedin}`}>
               <Icon icon='GrLinkedinOption' />
+            </ExternalLink>
+            <ExternalLink to={`https://${data.social.medium}.medium.com/`}>
+              <Icon icon='GrMedium' />
             </ExternalLink>
           </Icons>
         </div>

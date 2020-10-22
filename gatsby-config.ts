@@ -13,6 +13,7 @@ export const gatsbyConfig: GatsbyConfig = {
       github: 'mrseanbaines',
       twitter: 'mrseanbaines',
       linkedin: 'seanbaines',
+      medium: 'mrseanbaines',
     },
   },
   plugins: [

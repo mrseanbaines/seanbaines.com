@@ -14,7 +14,7 @@ export type Props = {
   }
 }
 
-export const IconCardsWithImage: React.FC<Props> = ({ data }) => (
+export const IconCardsWithImage = ({ data }: Props) => (
   <Section>
     <Row offset={2}>
       <Text as='h2' size={5} weight='bold' textAlign={['right', 'left']} mb={3}>

@@ -13,7 +13,7 @@ export type Props = {
   stroke?: number
 }
 
-export const IconCard: React.FC<Props> = ({ icon, title, body, large, stroke }) => (
+export const IconCard = ({ icon, title, body, large, stroke }: Props) => (
   <div>
     <IconWrapper stroke={stroke} large={large}>
       <Icon icon={icon} size={large ? 2 : 1} />

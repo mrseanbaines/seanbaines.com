@@ -16,7 +16,7 @@ type Props = {
   }
 }
 
-export const RotatingCards: React.FC<Props> = ({ items, data }) => (
+export const RotatingCards = ({ items, data }: Props) => (
   <Section fullWidth noGutter>
     <Text as='h2' size={2} textAlign='center' mb={2}>
       {data.title}

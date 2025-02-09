@@ -12,7 +12,7 @@ export type Props = {
   url: string
 }
 
-export const Card: React.FC<Props> = ({ title, body, extras, url }) => (
+export const Card = ({ title, body, extras, url }: Props) => (
   <Wrapper as={ExternalLink} to={url} draggable={false}>
     <Text weight='semibold' mb={0}>
       {title}

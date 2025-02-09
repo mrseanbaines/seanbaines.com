@@ -25,7 +25,7 @@ export type Data = {
 
 type Props = Omit<PageProps, 'children'>
 
-export const SEO: React.FC<Props> = ({ location }) => {
+export const SEO = ({ location }: Props) => {
   const data = useStaticQuery<Data>(query)
   const { social, siteName, author } = data.site.siteMetadata
   const url = new URL(location.pathname, process.env.GATSBY_SITE_URL || location.origin)

@@ -30,7 +30,7 @@ export type Props = SpaceProps & {
   icon: keyof typeof icons
 }
 
-export const Icon: React.FC<Props> = ({ color = 'default', size = 0, icon }) => {
+export const Icon = ({ color = 'default', size = 0, icon }: Props) => {
   if (!!size && !theme.sizes.icon[size]) {
     throw new Error('Invalid `size` prop')
   }

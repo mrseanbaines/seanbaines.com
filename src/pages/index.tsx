@@ -81,7 +81,7 @@ export type Data = {
 
 export type Props = PageProps<Data>
 
-const IndexPage: React.FC<Props> = ({ data }) => {
+const IndexPage = ({ data }: Props) => {
   const repos = data.githubData.data.user.pinnedItems.nodes.map(repo => ({
     title: repo.name,
     body: repo.description,

@@ -22,7 +22,7 @@ export type Props = {
   }
 }
 
-export const Hero: React.FC<Props> = ({ data }) => {
+export const Hero = ({ data }: Props) => {
   const [liked, toggleLiked, setLiked] = useToggle()
 
   const LIKED_KEY = 'liked'

@@ -42,7 +42,7 @@ const icons = [
   'SiYarn',
 ] satisfies React.ComponentProps<typeof Icon>['icon'][]
 
-export const RotatingIcons: React.FC<Props> = ({ data }) => (
+export const RotatingIcons = ({ data }: Props) => (
   <Section noGutter fullWidth>
     <PaddingX>
       <Text as='h2' size={2} textAlign='center' mb={2}>

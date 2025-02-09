@@ -6,7 +6,7 @@ export type Props = Omit<AnchorProps, 'href'> & {
   to: AnchorProps['href']
 }
 
-export const ExternalLink: React.FC<Props> = ({ children, to, ...props }) => (
+export const ExternalLink = ({ children, to, ...props }: Props) => (
   <a href={to} target='_blank' rel='noreferrer' {...props}>
     {children}
   </a>

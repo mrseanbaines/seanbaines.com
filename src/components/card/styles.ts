@@ -10,9 +10,9 @@ export const Wrapper = styled.div(({ theme }) => {
     background: ${theme.colors.background.default};
     width: 420px;
 
-    :hover,
-    :focus,
-    :active {
+    &:hover,
+    &:focus,
+    &:active {
       border-color: ${theme.colors.primary};
     }
   `

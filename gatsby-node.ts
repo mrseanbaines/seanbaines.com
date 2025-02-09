@@ -14,17 +14,17 @@ const paths = {
 
 export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({ actions }) => {
   const config: Webpack.Configuration = {
-    plugins: [new CleanTerminalPlugin()],
-    module: {
-      rules: [
-        {
-          enforce: 'pre',
-          test: /\.tsx?$/,
-          exclude: /node_modules/,
-          use: ['eslint-loader'],
-        },
-      ],
-    },
+    // plugins: [new CleanTerminalPlugin()],
+    // module: {
+    //   rules: [
+    //     {
+    //       enforce: 'pre',
+    //       test: /\.tsx?$/,
+    //       exclude: /node_modules/,
+    //       use: ['eslint-loader'],
+    //     },
+    //   ],
+    // },
     resolve: {
       modules: ['node_modules', paths.appNodeModules, paths.appSrc],
     },

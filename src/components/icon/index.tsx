@@ -1,5 +1,10 @@
 import React from 'react'
-import * as reactIcons from 'react-icons/all'
+import * as reactIconsGr from 'react-icons/gr'
+import * as reactIconsAi from 'react-icons/ai'
+import * as reactIconsFa from 'react-icons/fa'
+import * as reactIconsRi from 'react-icons/ri'
+import * as reactIconsVsc from 'react-icons/vsc'
+import * as reactIconsSi from 'react-icons/si'
 import { SpaceProps } from 'styled-system'
 
 import { ReactComponent as ContactIcon } from 'images/contact.svg'
@@ -9,7 +14,12 @@ import { theme } from 'theme'
 import { IconWrapper } from './styles'
 
 const icons = {
-  ...reactIcons,
+  ...reactIconsGr,
+  ...reactIconsAi,
+  ...reactIconsFa,
+  ...reactIconsRi,
+  ...reactIconsVsc,
+  ...reactIconsSi,
   ContactIcon,
   HeartIcon,
 }

@@ -22,7 +22,7 @@ export const IconWrapper = styled.div<IconWrapperProps>(({ theme, stroke, large 
     display: inline-block;
     margin-bottom: ${theme.space[large ? 1 : 0]};
 
-    ::before {
+    &::before {
       content: '';
       width: ${theme.sizes.icon[large ? 3 : 2]};
       height: ${theme.sizes.icon[large ? 3 : 2]};

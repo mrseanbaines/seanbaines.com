@@ -66,3 +66,5 @@ export const gatsbyConfig: GatsbyConfig = {
     },
   ],
 }
+
+export default gatsbyConfig

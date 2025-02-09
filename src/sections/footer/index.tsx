@@ -17,6 +17,6 @@ export const Footer: React.FC<Props> = ({ data }) => (
     <Span>{data.text1}</Span>
     <Icon icon='SiGatsby' color='muted' />
     <Span>{data.text2}</Span>
-    <Icon icon='SiZeit' color='muted' />
+    <Icon icon='SiVercel' color='muted' />
   </Wrapper>
 )

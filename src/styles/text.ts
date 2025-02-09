@@ -55,7 +55,7 @@ const text = ({ theme, color, size, weight, upper, block, textLink }: TextProps)
     line-height: var(--line-height);
     position: relative;
 
-    ::after {
+    &::after {
       pointer-events: none;
       content: '';
       width: 100%;
@@ -70,12 +70,12 @@ const text = ({ theme, color, size, weight, upper, block, textLink }: TextProps)
       position: absolute;
     }
 
-    :hover,
-    :focus,
-    :active {
+    &:hover,
+    &:focus,
+    &:active {
       background-position-y: 100%;
 
-      ::after {
+      &::after {
         height: 100%;
         bottom: 0;
       }

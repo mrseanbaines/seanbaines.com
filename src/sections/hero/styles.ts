@@ -13,9 +13,9 @@ export const Icons = styled.div(({ theme }) => {
     a {
       line-height: 0;
 
-      :hover,
-      :focus,
-      :active {
+      &:hover,
+      &:focus,
+      &:active {
         * {
           color: ${theme.colors.icons.muted};
         }
@@ -28,7 +28,7 @@ export const TitleWrapper = styled.div(({ theme }) => {
   return css`
     position: relative;
 
-    ::before {
+    &::before {
       content: '';
       background-image: url(${circle});
       background-size: contain;
@@ -113,7 +113,7 @@ export const HeartCTA = styled(CTA)<HeartCTAProps>(({ theme, liked }) => {
         }
       }
 
-      ::before {
+      &::before {
         content: '';
         position: absolute;
         top: 0;

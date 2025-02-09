@@ -25,7 +25,7 @@ export const TitleWrapper = styled.div(() => {
   return css`
     position: relative;
 
-    ::before {
+    &::before {
       content: url(${strokeUnderline});
       position: absolute;
       top: 100%;

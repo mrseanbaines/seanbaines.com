@@ -26,7 +26,7 @@ const icons = [
   'SiJest',
   'SiMarkdown',
   'SiNetlify',
-  'SiNodeDotJs',
+  'SiNodedotjs',
   'SiPostman',
   'SiPrettier',
   'SiReact',
@@ -34,13 +34,13 @@ const icons = [
   'SiRedux',
   'SiSass',
   'SiStorybook',
-  'SiStyledComponents',
+  'SiStyledcomponents',
   'SiTypescript',
-  'SiZeit',
-  'SiVisualstudiocode',
+  'SiVercel',
+  'VscVscode',
   'SiWebpack',
   'SiYarn',
-] as const
+] satisfies React.ComponentProps<typeof Icon>['icon'][]
 
 export const RotatingIcons: React.FC<Props> = ({ data }) => (
   <Section noGutter fullWidth>

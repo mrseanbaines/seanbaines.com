@@ -6,7 +6,7 @@ export const IconsWrapper = styled.div(({ theme }) => {
     justify-content: center;
     position: relative;
 
-    ::after {
+    $::after {
       pointer-events: none;
       content: '';
       background: linear-gradient(

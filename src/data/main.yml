@@ -45,7 +45,7 @@ iconCardsRow:
     - id: g
       title: Styled Components
       body: I love the power of CSS-in-JS and styled-components is my go-to library for styling React components.
-      icon: SiStyledComponents
+      icon: SiStyledcomponents
 
 rotatingCards:
   title: Some things I've built

@@ -8,3 +8,4 @@ public/
 
 # deployment files
 .vercel/
+node_modules
